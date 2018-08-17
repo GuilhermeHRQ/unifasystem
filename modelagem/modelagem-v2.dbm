@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.0" last-position="0,370" last-zoom="0.9"
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="0.8"
 	 default-schema="public" default-owner="postgres">
 <database name="new_database">
 </database>
@@ -16,7 +16,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="disciplina">
 	<schema name="administracao"/>
-	<position x="40" y="83"/>
+	<position x="158.056" y="99.3889"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Primary key da disciplina]]></comment>
@@ -30,7 +30,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<comment><![CDATA[Descrição da disciplina]]></comment>
 	</column>
 	<column name="cargahoraria" not-null="true">
-		<type name="float" length="0"/>
+		<type name="numeric" length="6" precision="2"/>
 		<comment><![CDATA[Carga Horaria da disciplina]]></comment>
 	</column>
 	<column name="ativo" not-null="true" default-value="true">
@@ -44,12 +44,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="curso">
 	<schema name="administracao"/>
-	<position x="1160" y="483"/>
+	<position x="1382.22" y="544.111"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Primary Key da tabela]]></comment>
 	</column>
-	<column name="id_coordenador">
+	<column name="idcoordenador">
 		<type name="integer" length="0"/>
 		<comment><![CDATA[Coordenador do curso]]></comment>
 	</column>
@@ -73,16 +73,19 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
 	<constraint name="uq_curso_id_coordenador" type="uq-constr" table="administracao.curso">
-		<columns names="id_coordenador" ref-type="src-columns"/>
+		<columns names="idcoordenador" ref-type="src-columns"/>
 	</constraint>
 </table>
 
 <table name="professor">
 	<schema name="administracao"/>
-	<position x="120" y="600"/>
+	<position x="212.083" y="548.056"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Primary Key da tabela]]></comment>
+	</column>
+	<column name="idusuarioacesso" not-null="true">
+		<type name="integer" length="0"/>
 	</column>
 	<column name="cpf" not-null="true">
 		<type name="char" length="11"/>
@@ -131,11 +134,14 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<constraint name="uq_professor_cpf" type="uq-constr" table="administracao.professor">
 		<columns names="cpf" ref-type="src-columns"/>
 	</constraint>
+	<constraint name="uq_professor_email" type="uq-constr" table="administracao.professor">
+		<columns names="email" ref-type="src-columns"/>
+	</constraint>
 </table>
 
 <table name="estado">
 	<schema name="administracao"/>
-	<position x="1080" y="760"/>
+	<position x="1348.06" y="799.167"/>
 	<column name="sigla" not-null="true">
 		<type name="char" length="2"/>
 	</column>
@@ -149,7 +155,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="cidade">
 	<schema name="administracao"/>
-	<position x="680" y="703"/>
+	<position x="842.361" y="773.139"/>
 	<column name="id" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
@@ -166,29 +172,32 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="professor_disciplina_turma">
 	<schema name="administracao"/>
-	<position x="220" y="340"/>
-	<column name="id_professor" not-null="true">
+	<position x="226.667" y="324.444"/>
+	<column name="idprofessor" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
-	<column name="id_disciplina" not-null="true">
+	<column name="iddisciplina" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
-	<column name="id_turma" not-null="true">
+	<column name="idturma" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
 	<column name="semestre" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
 	<constraint name="professor_disciplina_pk" type="pk-constr" table="administracao.professor_disciplina_turma">
-		<columns names="id_professor,id_disciplina,id_turma" ref-type="src-columns"/>
+		<columns names="idprofessor,iddisciplina,idturma" ref-type="src-columns"/>
 	</constraint>
 </table>
 
 <table name="aluno">
 	<schema name="administracao"/>
-	<position x="1180" y="43"/>
+	<position x="1397.78" y="79.6667"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
+	</column>
+	<column name="idusuarioacesso" not-null="true">
+		<type name="integer" length="0"/>
 	</column>
 	<column name="nome" not-null="true">
 		<type name="varchar" length="30"/>
@@ -236,7 +245,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="turma">
 	<schema name="administracao"/>
-	<position x="700" y="283"/>
+	<position x="691.111" y="388.556"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -265,7 +274,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="turno">
 	<schema name="administracao"/>
-	<position x="340" y="123"/>
+	<position x="439.306" y="144.111"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -285,7 +294,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="aluno_turma">
 	<schema name="administracao"/>
-	<position x="620" y="43"/>
+	<position x="795.417" y="143.972"/>
 	<column name="id_turma" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
@@ -308,7 +317,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="usuario_acesso">
 	<schema name="seguranca"/>
-	<position x="40" y="923"/>
+	<position x="157.917" y="930.5"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -318,20 +327,11 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="logon" not-null="true">
 		<type name="varchar" length="10"/>
 	</column>
-	<column name="email" not-null="true">
-		<type name="varchar" length="255"/>
-	</column>
 	<column name="senha" not-null="true">
 		<type name="varchar" length="100"/>
 	</column>
 	<column name="ativo" not-null="true">
 		<type name="boolean" length="0"/>
-	</column>
-	<column name="id_usuario">
-		<type name="integer" length="0"/>
-	</column>
-	<column name="nome" not-null="true">
-		<type name="varchar" length="60"/>
 	</column>
 	<constraint name="usuario_acesso_pk" type="pk-constr" table="seguranca.usuario_acesso">
 		<columns names="id" ref-type="src-columns"/>
@@ -339,21 +339,15 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<constraint name="uq_usuario_logon" type="uq-constr" table="seguranca.usuario_acesso">
 		<columns names="logon" ref-type="src-columns"/>
 	</constraint>
-	<constraint name="uq_usuario_email" type="uq-constr" table="seguranca.usuario_acesso">
-		<columns names="email" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="uq_usuario_id_usuario" type="uq-constr" table="seguranca.usuario_acesso">
-		<columns names="id_usuario" ref-type="src-columns"/>
-	</constraint>
 </table>
 
 <table name="tipo_usuario">
 	<schema name="seguranca"/>
-	<position x="580" y="920"/>
+	<position x="697.917" y="927.5"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
-	<column name="tipo" not-null="true">
+	<column name="nome" not-null="true">
 		<type name="varchar" length="20"/>
 	</column>
 	<constraint name="tipo_usuario_pk" type="pk-constr" table="seguranca.tipo_usuario">
@@ -361,15 +355,47 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
+<table name="administrador">
+	<schema name="seguranca"/>
+	<position x="614.583" y="1063.06"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="sobrenome" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="255"/>
+	</column>
+	<column name="cpf" not-null="true">
+		<type name="char" length="11"/>
+	</column>
+	<column name="id_usuario_acesso" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="administrador_pk" type="pk-constr" table="seguranca.administrador">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
 <constraint name="fk_curso_id_coordenador" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.professor" table="administracao.curso">
-	<columns names="id_coordenador" ref-type="src-columns"/>
+	<columns names="idcoordenador" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
 <constraint name="fk_professor_id_cidade" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.cidade" table="administracao.professor">
 	<columns names="idcidade" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_professor_usuario_acesso" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.usuario_acesso" table="administracao.professor">
+	<columns names="idusuarioacesso" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
@@ -381,25 +407,31 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <constraint name="fk_id_professor" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.professor" table="administracao.professor_disciplina_turma">
-	<columns names="id_professor" ref-type="src-columns"/>
+	<columns names="idprofessor" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
 <constraint name="fk_id_disciplina" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.disciplina" table="administracao.professor_disciplina_turma">
-	<columns names="id_disciplina" ref-type="src-columns"/>
+	<columns names="iddisciplina" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
 <constraint name="fk_id_turma" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.turma" table="administracao.professor_disciplina_turma">
-	<columns names="id_turma" ref-type="src-columns"/>
+	<columns names="idturma" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
 <constraint name="fk_aluno_id_cidade" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.cidade" table="administracao.aluno">
 	<columns names="idcidade" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_aluno_usuario_acesso" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.usuario_acesso" table="administracao.aluno">
+	<columns names="idusuarioacesso" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
@@ -430,6 +462,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <constraint name="fk_usuario_tipo_usuario" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.tipo_usuario" table="seguranca.usuario_acesso">
 	<columns names="id_tipo_usuario" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_administrador_usuario_acesso" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.usuario_acesso" table="seguranca.administrador">
+	<columns names="id_usuario_acesso" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
@@ -491,6 +529,21 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <relationship name="rel_usuario_acesso_tipo_usuario" type="relfk"
 	 src-table="seguranca.usuario_acesso"
 	 dst-table="seguranca.tipo_usuario"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_professor_usuario_acesso" type="relfk"
+	 src-table="administracao.professor"
+	 dst-table="seguranca.usuario_acesso"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_aluno_usuario_acesso" type="relfk"
+	 src-table="administracao.aluno"
+	 dst-table="seguranca.usuario_acesso"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_administrador_usuario_acesso" type="relfk"
+	 src-table="seguranca.administrador"
+	 dst-table="seguranca.usuario_acesso"
 	 src-required="false" dst-required="false"/>
 
 </dbmodel>
