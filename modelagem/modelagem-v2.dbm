@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="0.8"
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,414" last-zoom="0.8"
 	 default-schema="public" default-owner="postgres">
 <database name="new_database">
 </database>
@@ -84,9 +84,6 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Primary Key da tabela]]></comment>
 	</column>
-	<column name="idusuarioacesso" not-null="true">
-		<type name="integer" length="0"/>
-	</column>
 	<column name="cpf" not-null="true">
 		<type name="char" length="11"/>
 		<comment><![CDATA[CPF do professor]]></comment>
@@ -141,7 +138,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="estado">
 	<schema name="administracao"/>
-	<position x="1348.06" y="799.167"/>
+	<position x="1339.31" y="777.917"/>
 	<column name="sigla" not-null="true">
 		<type name="char" length="2"/>
 	</column>
@@ -252,7 +249,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="numero" not-null="true">
 		<type name="varchar" length="30"/>
 	</column>
-	<column name="id_curso" not-null="true">
+	<column name="idcurso" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
 	<column name="datainicio" not-null="true">
@@ -261,7 +258,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="datatermino" not-null="true">
 		<type name="date" length="0"/>
 	</column>
-	<column name="id_turno" not-null="true">
+	<column name="idturno" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
 	<column name="ativo" not-null="true" default-value="true">
@@ -307,6 +304,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="dataconclusao">
 		<type name="date" length="0"/>
 	</column>
+	<column name="ativo" not-null="true" default-value="TRUE">
+		<type name="boolean" length="0"/>
+	</column>
 	<constraint name="aluno_turma_pk" type="pk-constr" table="administracao.aluno_turma">
 		<columns names="id_turma,id_aluno" ref-type="src-columns"/>
 	</constraint>
@@ -315,14 +315,20 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <schema name="seguranca" rect-visible="true" fill-color="#5500ff">
 </schema>
 
-<table name="usuario_acesso">
+<table name="usuarioacesso">
 	<schema name="seguranca"/>
-	<position x="157.917" y="930.5"/>
+	<position x="157.917" y="929.25"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
-	<column name="id_tipo_usuario" not-null="true">
+	<column name="idusuario" not-null="true">
 		<type name="integer" length="0"/>
+	</column>
+	<column name="idtipousuario" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="nome">
+		<type name="smallint" length="0"/>
 	</column>
 	<column name="logon" not-null="true">
 		<type name="varchar" length="10"/>
@@ -333,10 +339,13 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="ativo" not-null="true">
 		<type name="boolean" length="0"/>
 	</column>
-	<constraint name="usuario_acesso_pk" type="pk-constr" table="seguranca.usuario_acesso">
+	<column name="ultimologin">
+		<type name="timestamp" length="0"/>
+	</column>
+	<constraint name="usuario_acesso_pk" type="pk-constr" table="seguranca.usuarioacesso">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
-	<constraint name="uq_usuario_logon" type="uq-constr" table="seguranca.usuario_acesso">
+	<constraint name="uq_usuario_logon" type="uq-constr" table="seguranca.usuarioacesso">
 		<columns names="logon" ref-type="src-columns"/>
 	</constraint>
 </table>
@@ -357,7 +366,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="administrador">
 	<schema name="seguranca"/>
-	<position x="614.583" y="1063.06"/>
+	<position x="688.333" y="1061.81"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -373,9 +382,6 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="cpf" not-null="true">
 		<type name="char" length="11"/>
 	</column>
-	<column name="id_usuario_acesso" not-null="true">
-		<type name="integer" length="0"/>
-	</column>
 	<constraint name="administrador_pk" type="pk-constr" table="seguranca.administrador">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
@@ -390,12 +396,6 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <constraint name="fk_professor_id_cidade" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.cidade" table="administracao.professor">
 	<columns names="idcidade" ref-type="src-columns"/>
-	<columns names="id" ref-type="dst-columns"/>
-</constraint>
-
-<constraint name="fk_professor_usuario_acesso" type="fk-constr" comparison-type="MATCH FULL"
-	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.usuario_acesso" table="administracao.professor">
-	<columns names="idusuarioacesso" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
@@ -429,21 +429,15 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
-<constraint name="fk_aluno_usuario_acesso" type="fk-constr" comparison-type="MATCH FULL"
-	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.usuario_acesso" table="administracao.aluno">
-	<columns names="idusuarioacesso" ref-type="src-columns"/>
-	<columns names="id" ref-type="dst-columns"/>
-</constraint>
-
 <constraint name="fk_turma_curso" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.curso" table="administracao.turma">
-	<columns names="id_curso" ref-type="src-columns"/>
+	<columns names="idcurso" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
 <constraint name="fk_turma_turno" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.turno" table="administracao.turma">
-	<columns names="id_turno" ref-type="src-columns"/>
+	<columns names="idturno" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
@@ -460,14 +454,8 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </constraint>
 
 <constraint name="fk_usuario_tipo_usuario" type="fk-constr" comparison-type="MATCH FULL"
-	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.tipo_usuario" table="seguranca.usuario_acesso">
-	<columns names="id_tipo_usuario" ref-type="src-columns"/>
-	<columns names="id" ref-type="dst-columns"/>
-</constraint>
-
-<constraint name="fk_administrador_usuario_acesso" type="fk-constr" comparison-type="MATCH FULL"
-	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.usuario_acesso" table="seguranca.administrador">
-	<columns names="id_usuario_acesso" ref-type="src-columns"/>
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.tipo_usuario" table="seguranca.usuarioacesso">
+	<columns names="idtipousuario" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
@@ -527,23 +515,8 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 src-required="false" dst-required="false"/>
 
 <relationship name="rel_usuario_acesso_tipo_usuario" type="relfk"
-	 src-table="seguranca.usuario_acesso"
+	 src-table="seguranca.usuarioacesso"
 	 dst-table="seguranca.tipo_usuario"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="rel_professor_usuario_acesso" type="relfk"
-	 src-table="administracao.professor"
-	 dst-table="seguranca.usuario_acesso"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="rel_aluno_usuario_acesso" type="relfk"
-	 src-table="administracao.aluno"
-	 dst-table="seguranca.usuario_acesso"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="rel_administrador_usuario_acesso" type="relfk"
-	 src-table="seguranca.administrador"
-	 dst-table="seguranca.usuario_acesso"
 	 src-required="false" dst-required="false"/>
 
 </dbmodel>
