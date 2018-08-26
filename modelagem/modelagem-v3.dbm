@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,63" last-zoom="0.8"
+	 default-schema="public" default-owner="postgres">
+<database name="new_database">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<schema name="administracao" rect-visible="true" fill-color="#55aa00">
+</schema>
+
+<table name="disciplina">
+	<schema name="administracao"/>
+	<position x="20" y="66"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[Primary key da disciplina]]></comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment><![CDATA[Nome da disciplina]]></comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="250"/>
+		<comment><![CDATA[Descrição da disciplina]]></comment>
+	</column>
+	<column name="cargahoraria" not-null="true">
+		<type name="numeric" length="6" precision="2"/>
+		<comment><![CDATA[Carga Horaria da disciplina]]></comment>
+	</column>
+	<column name="ativo" not-null="true" default-value="true">
+		<type name="boolean" length="0"/>
+		<comment><![CDATA[Flag que indica se a disciplina se encontra ativa]]></comment>
+	</column>
+	<constraint name="disciplina_pk" type="pk-constr" table="administracao.disciplina">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="curso">
+	<schema name="administracao"/>
+	<position x="1260" y="100"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[Primary Key da tabela]]></comment>
+	</column>
+	<column name="idcoordenador">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Coordenador do curso]]></comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment><![CDATA[Nome do curso]]></comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="250"/>
+		<comment><![CDATA[Descricao do curso]]></comment>
+	</column>
+	<column name="valor" not-null="true">
+		<type name="numeric" length="10" precision="2"/>
+		<comment><![CDATA[Valor total do curso]]></comment>
+	</column>
+	<column name="ativo" not-null="true" default-value="true">
+		<type name="boolean" length="0"/>
+		<comment><![CDATA[Flag para indicar se o curso se encontra ativo]]></comment>
+	</column>
+	<constraint name="curso_pk" type="pk-constr" table="administracao.curso">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="uq_curso_id_coordenador" type="uq-constr" table="administracao.curso">
+		<columns names="idcoordenador" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="professor">
+	<schema name="administracao"/>
+	<position x="40" y="543"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[Primary Key da tabela]]></comment>
+	</column>
+	<column name="cpf" not-null="true">
+		<type name="char" length="11"/>
+		<comment><![CDATA[CPF do professor]]></comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+		<comment><![CDATA[Nome do professor]]></comment>
+	</column>
+	<column name="sobrenome" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="datanascimento" not-null="true">
+		<type name="date" length="0"/>
+	</column>
+	<column name="salario" not-null="true">
+		<type name="numeric" length="10" precision="2"/>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="255"/>
+	</column>
+	<column name="telefone" not-null="true">
+		<type name="char" length="11"/>
+	</column>
+	<column name="idendereco" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="professor_pk" type="pk-constr" table="administracao.professor">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="uq_professor_cpf" type="uq-constr" table="administracao.professor">
+		<columns names="cpf" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="uq_professor_email" type="uq-constr" table="administracao.professor">
+		<columns names="email" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="estado">
+	<schema name="administracao"/>
+	<position x="1300" y="783"/>
+	<column name="sigla" not-null="true">
+		<type name="char" length="2"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+	</column>
+	<constraint name="estado_pk" type="pk-constr" table="administracao.estado">
+		<columns names="sigla" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="cidade">
+	<schema name="administracao"/>
+	<position x="880" y="743"/>
+	<column name="id" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+	</column>
+	<column name="uf" not-null="true">
+		<type name="char" length="2"/>
+	</column>
+	<constraint name="cidade_pk" type="pk-constr" table="administracao.cidade">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="professor_disciplina_turma">
+	<schema name="administracao"/>
+	<position x="80" y="286"/>
+	<column name="idprofessor" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="iddisciplina" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="idturma" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="semestre" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="professor_disciplina_pk" type="pk-constr" table="administracao.professor_disciplina_turma">
+		<columns names="idprofessor,iddisciplina,idturma" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="aluno">
+	<schema name="administracao"/>
+	<position x="1240" y="520"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="idusuarioacesso" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="sobrenome" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="cpf" not-null="true">
+		<type name="char" length="11"/>
+	</column>
+	<column name="datanascimento" not-null="true">
+		<type name="date" length="0"/>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="255"/>
+	</column>
+	<column name="telefone" not-null="true">
+		<type name="char" length="11"/>
+	</column>
+	<column name="idendereco" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="aluno_pk" type="pk-constr" table="administracao.aluno">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="uq_aluno_cpf" type="uq-constr" table="administracao.aluno">
+		<columns names="cpf" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="turma">
+	<schema name="administracao"/>
+	<position x="800" y="420"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="numero" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="idcurso" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="datainicio" not-null="true">
+		<type name="date" length="0"/>
+	</column>
+	<column name="datatermino" not-null="true">
+		<type name="date" length="0"/>
+	</column>
+	<column name="idturno" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="ativo" not-null="true" default-value="true">
+		<type name="boolean" length="0"/>
+	</column>
+	<constraint name="turma_pk" type="pk-constr" table="administracao.turma">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="turno">
+	<schema name="administracao"/>
+	<position x="300" y="106"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="20"/>
+	</column>
+	<column name="horainicio" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="horatermino" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<constraint name="turno_pk" type="pk-constr" table="administracao.turno">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="aluno_turma">
+	<schema name="administracao"/>
+	<position x="680" y="60"/>
+	<column name="id_turma" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="id_aluno" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="dataingresso" not-null="true">
+		<type name="date" length="0"/>
+	</column>
+	<column name="dataconclusao">
+		<type name="date" length="0"/>
+	</column>
+	<column name="ativo" not-null="true" default-value="TRUE">
+		<type name="boolean" length="0"/>
+	</column>
+	<constraint name="aluno_turma_pk" type="pk-constr" table="administracao.aluno_turma">
+		<columns names="id_turma,id_aluno" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<schema name="seguranca" rect-visible="true" fill-color="#5500ff">
+</schema>
+
+<table name="usuarioacesso">
+	<schema name="seguranca"/>
+	<position x="20" y="903"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="idusuario" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="idtipousuario" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+	<column name="logon" not-null="true">
+		<type name="varchar" length="10"/>
+	</column>
+	<column name="senha" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="ativo" not-null="true">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="ultimologin">
+		<type name="timestamp" length="0"/>
+	</column>
+	<constraint name="usuario_acesso_pk" type="pk-constr" table="seguranca.usuarioacesso">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="uq_usuario_logon" type="uq-constr" table="seguranca.usuarioacesso">
+		<columns names="logon" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="tipo_usuario">
+	<schema name="seguranca"/>
+	<position x="560" y="903"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="20"/>
+	</column>
+	<constraint name="tipo_usuario_pk" type="pk-constr" table="seguranca.tipo_usuario">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="endereco">
+	<schema name="administracao"/>
+	<position x="460" y="663"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="cep" not-null="true">
+		<type name="char" length="8"/>
+	</column>
+	<column name="idcidade" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="logradouro" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="numero" not-null="true">
+		<type name="varchar" length="5"/>
+	</column>
+	<column name="bairro" not-null="true">
+		<type name="varchar" length="50"/>
+	</column>
+	<column name="complemento">
+		<type name="varchar" length="30"/>
+	</column>
+	<constraint name="pk_endereco" type="pk-constr" table="administracao.endereco">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<constraint name="fk_curso_id_coordenador" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.professor" table="administracao.curso">
+	<columns names="idcoordenador" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_professor_endereco_idendereco" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.endereco" table="administracao.professor">
+	<columns names="idendereco" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_cidade_uf" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.estado" table="administracao.cidade">
+	<columns names="uf" ref-type="src-columns"/>
+	<columns names="sigla" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_id_professor" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.professor" table="administracao.professor_disciplina_turma">
+	<columns names="idprofessor" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_id_disciplina" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.disciplina" table="administracao.professor_disciplina_turma">
+	<columns names="iddisciplina" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_id_turma" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.turma" table="administracao.professor_disciplina_turma">
+	<columns names="idturma" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_aluno_endereco_idendereco" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.endereco" table="administracao.aluno">
+	<columns names="idendereco" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_turma_curso" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.curso" table="administracao.turma">
+	<columns names="idcurso" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_turma_turno" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.turno" table="administracao.turma">
+	<columns names="idturno" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_aluno_turma_turma" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.turma" table="administracao.aluno_turma">
+	<columns names="id_turma" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_aluno_turma_aluno" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.aluno" table="administracao.aluno_turma">
+	<columns names="id_aluno" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_usuario_tipo_usuario" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.tipo_usuario" table="seguranca.usuarioacesso">
+	<columns names="idtipousuario" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_endereco_cidade_idcidade" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.cidade" table="administracao.endereco">
+	<columns names="idcidade" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_cidade_estado" type="relfk"
+	 src-table="administracao.cidade"
+	 dst-table="administracao.estado"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_curso_professor" type="relfk"
+	 src-table="administracao.curso"
+	 dst-table="administracao.professor"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_professor_disciplina_professor" type="relfk"
+	 src-table="administracao.professor_disciplina_turma"
+	 dst-table="administracao.professor"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_professor_disciplina_disciplina" type="relfk"
+	 src-table="administracao.professor_disciplina_turma"
+	 dst-table="administracao.disciplina"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_turma_curso" type="relfk"
+	 src-table="administracao.turma"
+	 dst-table="administracao.curso"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_turma_turno" type="relfk"
+	 src-table="administracao.turma"
+	 dst-table="administracao.turno"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_aluno_turma_turma" type="relfk"
+	 src-table="administracao.aluno_turma"
+	 dst-table="administracao.turma"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_aluno_turma_aluno" type="relfk"
+	 src-table="administracao.aluno_turma"
+	 dst-table="administracao.aluno"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_professor_disciplina_turma_turma" type="relfk"
+	 src-table="administracao.professor_disciplina_turma"
+	 dst-table="administracao.turma"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_usuario_acesso_tipo_usuario" type="relfk"
+	 src-table="seguranca.usuarioacesso"
+	 dst-table="seguranca.tipo_usuario"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_enderecos_cidade" type="relfk"
+	 src-table="administracao.endereco"
+	 dst-table="administracao.cidade"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_professor_endereco" type="relfk"
+	 src-table="administracao.professor"
+	 dst-table="administracao.endereco"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_aluno_endereco" type="relfk"
+	 src-table="administracao.aluno"
+	 dst-table="administracao.endereco"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>
