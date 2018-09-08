@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.0" last-position="0,63" last-zoom="0.8"
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,485" last-zoom="0.8"
 	 default-schema="public" default-owner="postgres">
 <database name="new_database">
 </database>
@@ -16,7 +16,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="disciplina">
 	<schema name="administracao"/>
-	<position x="20" y="66"/>
+	<position x="20" y="60"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Primary key da disciplina]]></comment>
@@ -79,7 +79,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="professor">
 	<schema name="administracao"/>
-	<position x="40" y="543"/>
+	<position x="40" y="540"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Primary Key da tabela]]></comment>
@@ -123,7 +123,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="estado">
 	<schema name="administracao"/>
-	<position x="1300" y="783"/>
+	<position x="1300" y="780"/>
 	<column name="sigla" not-null="true">
 		<type name="char" length="2"/>
 	</column>
@@ -137,7 +137,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="cidade">
 	<schema name="administracao"/>
-	<position x="880" y="743"/>
+	<position x="880" y="740"/>
 	<column name="id" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
@@ -154,7 +154,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="professor_disciplina_turma">
 	<schema name="administracao"/>
-	<position x="80" y="286"/>
+	<position x="80" y="280"/>
 	<column name="idprofessor" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
@@ -241,7 +241,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="turno">
 	<schema name="administracao"/>
-	<position x="300" y="106"/>
+	<position x="300" y="100"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -287,7 +287,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="usuarioacesso">
 	<schema name="seguranca"/>
-	<position x="20" y="903"/>
+	<position x="20" y="900"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -322,7 +322,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="tipo_usuario">
 	<schema name="seguranca"/>
-	<position x="560" y="903"/>
+	<position x="560" y="900"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -336,7 +336,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="endereco">
 	<schema name="administracao"/>
-	<position x="460" y="663"/>
+	<position x="460" y="660"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 	</column>
@@ -359,6 +359,40 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="varchar" length="30"/>
 	</column>
 	<constraint name="pk_endereco" type="pk-constr" table="administracao.endereco">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="opcoesmenu">
+	<schema name="seguranca"/>
+	<position x="20" y="1200"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="idmae">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="url" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+	</column>
+</table>
+
+<table name="opcoesmenuacesso">
+	<schema name="seguranca"/>
+	<position x="560" y="1060"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+	</column>
+	<column name="idopcaomenu" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="idtipousuario" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="opcoesmenuacesso_pk" type="pk-constr" table="seguranca.opcoesmenuacesso">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
 </table>
@@ -441,6 +475,24 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
+<constraint name="fk_opcoesmenu_opcoesmenu_idmae" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.opcoesmenu" table="seguranca.opcoesmenu">
+	<columns names="idmae" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_opcaomenuacesso_opcaomenu_idopcaomenu" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.opcoesmenu" table="seguranca.opcoesmenuacesso">
+	<columns names="idopcaomenu" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_opcaomenuacesso_tipousuario_idtipousuario" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.tipo_usuario" table="seguranca.opcoesmenuacesso">
+	<columns names="idtipousuario" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
 <relationship name="rel_cidade_estado" type="relfk"
 	 src-table="administracao.cidade"
 	 dst-table="administracao.estado"
@@ -504,6 +556,27 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <relationship name="rel_aluno_endereco" type="relfk"
 	 src-table="administracao.aluno"
 	 dst-table="administracao.endereco"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_opcoesmenu_opcoesmenu" type="relfk"
+	 src-table="seguranca.opcoesmenu"
+	 dst-table="seguranca.opcoesmenu"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="383.766" y="1243.6"/>
+	<position x="383.766" y="1189"/>
+	<position x="255.177" y="1189"/>
+	</line>
+</relationship>
+
+<relationship name="rel_opcoesmenuacesso_opcoesmenu" type="relfk"
+	 src-table="seguranca.opcoesmenuacesso"
+	 dst-table="seguranca.opcoesmenu"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_opcoesmenuacesso_tipo_usuario" type="relfk"
+	 src-table="seguranca.opcoesmenuacesso"
+	 dst-table="seguranca.tipo_usuario"
 	 src-required="false" dst-required="false"/>
 
 </dbmodel>
