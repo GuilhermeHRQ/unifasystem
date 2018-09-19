@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.0" last-position="0,63" last-zoom="0.8"
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="0.8"
 	 default-schema="public" default-owner="postgres">
 <database name="new_database">
 </database>
@@ -208,6 +208,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<constraint name="uq_aluno_cpf" type="uq-constr" table="administracao.aluno">
 		<columns names="cpf" ref-type="src-columns"/>
 	</constraint>
+	<constraint name="uq_aluno_email" type="uq-constr" table="administracao.aluno">
+		<columns names="email" ref-type="src-columns"/>
+	</constraint>
 </table>
 
 <table name="turma">
@@ -317,6 +320,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 	<constraint name="uq_usuario_logon" type="uq-constr" table="seguranca.usuarioacesso">
 		<columns names="logon" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="uq_usuarioacesso_idusuario" type="uq-constr" table="seguranca.usuarioacesso">
+		<columns names="idusuario" ref-type="src-columns"/>
 	</constraint>
 </table>
 
