@@ -3,12 +3,8 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<<<<<<< HEAD
-<dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="0.8"
-=======
-<dbmodel pgmodeler-ver="0.9.0" last-position="0,485" last-zoom="0.8"
->>>>>>> 8b4ec186b40be584679558a1a76f890685674880
-	 default-schema="public" default-owner="postgres">
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="1"
+	 default-owner="postgres">
 <database name="new_database">
 </database>
 
@@ -503,24 +499,39 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<columns names="id" ref-type="dst-columns"/>
 </constraint>
 
-<relationship name="rel_cidade_estado" type="relfk"
-	 src-table="administracao.cidade"
-	 dst-table="administracao.estado"
-	 src-required="false" dst-required="false"/>
-
 <relationship name="rel_curso_professor" type="relfk"
 	 src-table="administracao.curso"
 	 dst-table="administracao.professor"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="rel_professor_disciplina_professor" type="relfk"
+<relationship name="rel_professor_endereco" type="relfk"
+	 src-table="administracao.professor"
+	 dst-table="administracao.endereco"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_cidade_estado" type="relfk"
+	 src-table="administracao.cidade"
+	 dst-table="administracao.estado"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_professor_disciplina_turma_professor" type="relfk"
 	 src-table="administracao.professor_disciplina_turma"
 	 dst-table="administracao.professor"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="rel_professor_disciplina_disciplina" type="relfk"
+<relationship name="rel_professor_disciplina_turma_disciplina" type="relfk"
 	 src-table="administracao.professor_disciplina_turma"
 	 dst-table="administracao.disciplina"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_professor_disciplina_turma_turma" type="relfk"
+	 src-table="administracao.professor_disciplina_turma"
+	 dst-table="administracao.turma"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_aluno_endereco" type="relfk"
+	 src-table="administracao.aluno"
+	 dst-table="administracao.endereco"
 	 src-required="false" dst-required="false"/>
 
 <relationship name="rel_turma_curso" type="relfk"
@@ -543,41 +554,20 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 dst-table="administracao.aluno"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="rel_professor_disciplina_turma_turma" type="relfk"
-	 src-table="administracao.professor_disciplina_turma"
-	 dst-table="administracao.turma"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="rel_usuario_acesso_tipo_usuario" type="relfk"
+<relationship name="rel_usuarioacesso_tipo_usuario" type="relfk"
 	 src-table="seguranca.usuarioacesso"
 	 dst-table="seguranca.tipo_usuario"
 	 src-required="false" dst-required="false"/>
 
-<relationship name="rel_enderecos_cidade" type="relfk"
+<relationship name="rel_endereco_cidade" type="relfk"
 	 src-table="administracao.endereco"
 	 dst-table="administracao.cidade"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="rel_professor_endereco" type="relfk"
-	 src-table="administracao.professor"
-	 dst-table="administracao.endereco"
-	 src-required="false" dst-required="false"/>
-
-<relationship name="rel_aluno_endereco" type="relfk"
-	 src-table="administracao.aluno"
-	 dst-table="administracao.endereco"
 	 src-required="false" dst-required="false"/>
 
 <relationship name="rel_opcoesmenu_opcoesmenu" type="relfk"
 	 src-table="seguranca.opcoesmenu"
 	 dst-table="seguranca.opcoesmenu"
-	 src-required="false" dst-required="false">
-	<line>
-		<position x="383.766" y="1243.6"/>
-	<position x="383.766" y="1189"/>
-	<position x="255.177" y="1189"/>
-	</line>
-</relationship>
+	 src-required="false" dst-required="false"/>
 
 <relationship name="rel_opcoesmenuacesso_opcoesmenu" type="relfk"
 	 src-table="seguranca.opcoesmenuacesso"
