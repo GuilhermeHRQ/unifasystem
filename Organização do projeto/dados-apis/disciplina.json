@@ -1,0 +1,15 @@
+[
+    {
+        "id_curso": 92,
+        "id_serie": 237,
+        "semestre": 4,
+        "id_disciplina_serie": "407-237",
+        "nome_disciplina": "[SI-N\/4] GEST\u00c3O DE PROJETOS",
+        "nome_turma": "4\u00ba sem. SISTEMAS DE INFORMA\u00c7\u00c3O",
+        "id_docente": 125,
+        "id_categoria": 9204,
+        "id_disciplina": 407,
+        "tipo": "R",
+        "optativa": false
+    }
+]

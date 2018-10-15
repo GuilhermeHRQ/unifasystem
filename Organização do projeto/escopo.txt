@@ -1,0 +1,73 @@
+# Escopo Unifasystem (19/11)
+
+*** FRONT
+
+- Professor
+    - Lista de chamadas
+        - Filtros
+            - Disciplina / Curso
+            - Data (Padrão hoje)
+            - Status (Aberta, Aguardando confirmação e Finalizada)
+        - Lista 
+            - Disciplina
+            - Semestre
+            - Turma
+            - Data
+            - Hora abertura e fechamento
+            - Status
+
+    - Controle de presença
+        - Entrada de dados para abertura
+            - Disciplina
+            - Hora abertura
+            - Hora fechamento
+            - Quantidade de presenças
+            - Conteúdo lecionado (Pode ser na confirmação)
+        - Lista de alunos que se marcaram como presentes
+            - Código
+            - Nome
+            - Checkbox de presença
+
+- Aluno
+    - Cotrole de presença
+        - Data e hora do sistema
+        - Input para entrada do código do aluno (Leitor de código de barras ou digitado)
+        - Confirmação da presença após inserção dos dados
+
+*** BACK
+
+- Professor
+    - Login
+        - Fazer busca do professor (Código ou email) no banco do sistema
+            - Caso exista realiza o login
+            - Caso não exista, exigir o código do professor e realizar request na api de professores
+            para buscar os dados, após isto pedir uma nova senha e salvar no banco do sistema
+    - Lista de chamadas
+        - Filtros
+            - ID do professor
+            - Disciplina / Curso
+            - Data (Padrão hoje)
+            - Status (Aberta, Aguardando confirmação e Finalizada)
+    - Controle de presença
+        - Inserção de um novo controle
+            - Disciplina
+            - Hora abertura/fechamento
+            - Quantidade de presenças
+            - Conteúdo lecionado
+            - Habilitar uso para os alunos
+        - Edição do controle
+            - Caso aberta
+                - Desmarcar alunos presentes
+                - Alteração do conteúdo
+                - Alteração da quantidade de presenças?
+                - Finalizacao/cancelamento/confirmação da chamada
+            - Caso finalizada
+                - Visualizar dados
+                - Cancelamento da chamada
+
+
+
+
+
+
+

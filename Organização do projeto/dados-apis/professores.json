@@ -1,0 +1,1397 @@
+[
+    {
+        "id_docente": 2351,
+        "nome_docente": "ELVIRA GODIVA JUNQUEIRA",
+        "email_docente": "godiva@facef.br"
+    },
+    {
+        "id_docente": 4051,
+        "nome_docente": "FABIANO SIQUEIRA DOS PRAZERES",
+        "email_docente": "fabianoprazeres@facef.br"
+    },
+    {
+        "id_docente": 7366,
+        "nome_docente": "CYRO DE ALMEIDA DURIGAN",
+        "email_docente": "cyro@facef.br"
+    },
+    {
+        "id_docente": 8261,
+        "nome_docente": "BRUNO DAMANDO CURY",
+        "email_docente": "brunocury@facef.br"
+    },
+    {
+        "id_docente": 8579,
+        "nome_docente": "SOFIA MUNIZ ALVES GRACIOLI",
+        "email_docente": "sofiamuniz@facef.br"
+    },
+    {
+        "id_docente": 8860,
+        "nome_docente": "MARCOS AURELIO OGANDO DE OLIVEIRA",
+        "email_docente": "marcosaurelio@facef.br"
+    },
+    {
+        "id_docente": 8932,
+        "nome_docente": "VALDIR ALCANTARA DE SOUZA JUNIOR",
+        "email_docente": "valdiralcantara@facef.br"
+    },
+    {
+        "id_docente": 11212,
+        "nome_docente": "M\u00c1RCIA APARECIDA GIACOMINI",
+        "email_docente": "marciagiacomini@facef.br"
+    },
+    {
+        "id_docente": 13658,
+        "nome_docente": "STELLA C\u00c2NDIDA DE SENE IN\u00c1CIO",
+        "email_docente": "stellinhainacio@yahoo.com.br"
+    },
+    {
+        "id_docente": 13765,
+        "nome_docente": "JUNE TABAH",
+        "email_docente": "junetabah@facef.br"
+    },
+    {
+        "id_docente": 13791,
+        "nome_docente": "SUZANA MARIA CALEIRO PALMA CHEDID",
+        "email_docente": "suzanachedid@facef.br"
+    },
+    {
+        "id_docente": 14596,
+        "nome_docente": "VIVIANE ROBERTA ARANTES",
+        "email_docente": "vivianearantes@facef.br"
+    },
+    {
+        "id_docente": 15942,
+        "nome_docente": "ALFREDO JOSE MACHADO NETO",
+        "email_docente": "alfredo@facef.br"
+    },
+    {
+        "id_docente": 15944,
+        "nome_docente": "C\u00c9LIA HELENA MARTINS ROSA",
+        "email_docente": "celiahelena@facef.br"
+    },
+    {
+        "id_docente": 15945,
+        "nome_docente": "MARIN\u00caS SANTANA JUSTO SMITH",
+        "email_docente": "marinessmith@facef.br"
+    },
+    {
+        "id_docente": 15946,
+        "nome_docente": "FRANCISMAR MONTEIRO",
+        "email_docente": "francismar@facef.br"
+    },
+    {
+        "id_docente": 15947,
+        "nome_docente": "SHEILA FERNANDES PIMENTA E OLIVEIRA",
+        "email_docente": "sheila@facef.br"
+    },
+    {
+        "id_docente": 15951,
+        "nome_docente": "ALMIR MANTOVANI",
+        "email_docente": "almir@facef.br"
+    },
+    {
+        "id_docente": 15953,
+        "nome_docente": "M\u00c1RCIO BENEVIDES LESSA",
+        "email_docente": "marcio_lessa@facef.br"
+    },
+    {
+        "id_docente": 15955,
+        "nome_docente": "PAULO S\u00c9RGIO MOREIRA GUEDINE",
+        "email_docente": "guedine@facef.br"
+    },
+    {
+        "id_docente": 15956,
+        "nome_docente": "ANA TEREZA JACINTO TEIXEIRA",
+        "email_docente": "anatereza@facef.br"
+    },
+    {
+        "id_docente": 15957,
+        "nome_docente": "AUGUSTO APARECIDO MAZIER",
+        "email_docente": "mazier@facef.br"
+    },
+    {
+        "id_docente": 15958,
+        "nome_docente": "ANTONIO DOS SANTOS MORAES JUNIOR",
+        "email_docente": "asmoraes@facef.br"
+    },
+    {
+        "id_docente": 15960,
+        "nome_docente": "H\u00c9LCIO MARTINS TRIST\u00c3O",
+        "email_docente": "helcio@facef.br"
+    },
+    {
+        "id_docente": 15961,
+        "nome_docente": "CARLOS BRUNO BETTARELLO",
+        "email_docente": "cbruno@facef.br"
+    },
+    {
+        "id_docente": 15962,
+        "nome_docente": "CARLOS RENATO DONZELLI",
+        "email_docente": "carlosrenato@facef.br"
+    },
+    {
+        "id_docente": 15964,
+        "nome_docente": "CL\u00c9SIO ANTONIO DOURADO",
+        "email_docente": "clesiodourado@facef.br"
+    },
+    {
+        "id_docente": 15965,
+        "nome_docente": "DOROTI DAISY MANTOVANI",
+        "email_docente": "dorotidm@facef.br"
+    },
+    {
+        "id_docente": 15966,
+        "nome_docente": "EDNA MARIA CAMPANHOL",
+        "email_docente": "campanholi@facef.br"
+    },
+    {
+        "id_docente": 15967,
+        "nome_docente": "ELVISNEY APARECIDO ALVES",
+        "email_docente": "elvisney@facef.br"
+    },
+    {
+        "id_docente": 15969,
+        "nome_docente": "FERNANDO JOS\u00c9 DA CONCEI\u00c7\u00c3O LOUREN\u00c7O",
+        "email_docente": "flourenco@facef.br"
+    },
+    {
+        "id_docente": 15971,
+        "nome_docente": "H\u00c9LIO BRAGA FILHO",
+        "email_docente": "hb@facef.br"
+    },
+    {
+        "id_docente": 15972,
+        "nome_docente": "LUIS MENDES DE OLIVEIRA",
+        "email_docente": "mendes@facef.br"
+    },
+    {
+        "id_docente": 15975,
+        "nome_docente": "M\u00c1RIO FRANCISCO CHAGAS",
+        "email_docente": "mariochagas@facef.br"
+    },
+    {
+        "id_docente": 15976,
+        "nome_docente": "ORIVALDO DONZELLI",
+        "email_docente": "orivaldo@facef.br"
+    },
+    {
+        "id_docente": 15977,
+        "nome_docente": "PAULO DE TARSO OLIVEIRA",
+        "email_docente": "paulotarso@facef.br"
+    },
+    {
+        "id_docente": 15978,
+        "nome_docente": "REGINA HELENA DE ALMEIDA DURIGAN",
+        "email_docente": "reginadurigan@facef.br"
+    },
+    {
+        "id_docente": 15982,
+        "nome_docente": "ARNALDO ANTONIO RUFINO BATISTA",
+        "email_docente": "arnaldoarb@facef.br"
+    },
+    {
+        "id_docente": 15984,
+        "nome_docente": "JOS\u00c9 ALFREDO DE P\u00c1DUA GUERRA",
+        "email_docente": "josealfredo@facef.br"
+    },
+    {
+        "id_docente": 15986,
+        "nome_docente": "MARISA DE LOURDES FELICE PORTA",
+        "email_docente": "marisa@facef.br"
+    },
+    {
+        "id_docente": 15987,
+        "nome_docente": "SUSANA SALOM\u00c3O",
+        "email_docente": "susana.salomao@facef.br"
+    },
+    {
+        "id_docente": 15990,
+        "nome_docente": "V\u00c2NIA LEMOS ZAMBONI",
+        "email_docente": "vanialz@facef.br"
+    },
+    {
+        "id_docente": 15991,
+        "nome_docente": "MELISSA FRANCHINI CAVALCANTI BANDOS",
+        "email_docente": "melissa@facef.br"
+    },
+    {
+        "id_docente": 15993,
+        "nome_docente": "NILTON DE PAULA PEREIRA",
+        "email_docente": "nilpereira@facef.br"
+    },
+    {
+        "id_docente": 15995,
+        "nome_docente": "B\u00c1RBARA FADEL",
+        "email_docente": "bafadel@facef.br"
+    },
+    {
+        "id_docente": 15996,
+        "nome_docente": "PAULO ANDERSON CINTI",
+        "email_docente": "paulocinti@facef.br"
+    },
+    {
+        "id_docente": 15997,
+        "nome_docente": "RICARDO FADUL  DOMINGUES",
+        "email_docente": "fadul@facef.br"
+    },
+    {
+        "id_docente": 15999,
+        "nome_docente": "SILVIO CARVALHO NETO",
+        "email_docente": "silvio@facef.br"
+    },
+    {
+        "id_docente": 16000,
+        "nome_docente": "DONALDO DE ASSIS BORGES",
+        "email_docente": "donaldo@facef.br"
+    },
+    {
+        "id_docente": 16001,
+        "nome_docente": "NARA L\u00daCIA FACIOLI",
+        "email_docente": "nara@facef.br"
+    },
+    {
+        "id_docente": 16004,
+        "nome_docente": "CARLA APARECIDA ARENA VENTURA",
+        "email_docente": "caaventura@facef.br"
+    },
+    {
+        "id_docente": 16005,
+        "nome_docente": "SILVIA ALONSO Y ALONSO BITTAR CUNHA",
+        "email_docente": "saacunha@facef.br"
+    },
+    {
+        "id_docente": 16008,
+        "nome_docente": "M\u00d4NICA DE OLIVEIRA FALEIROS",
+        "email_docente": "monica@facef.br"
+    },
+    {
+        "id_docente": 16009,
+        "nome_docente": "ANA LUCIA FURQUIM CAMPOS TOSCANO",
+        "email_docente": "analucia@facef.br"
+    },
+    {
+        "id_docente": 16011,
+        "nome_docente": "MARCOS SILVESTRE GERA",
+        "email_docente": "gera@facef.br"
+    },
+    {
+        "id_docente": 16012,
+        "nome_docente": "ADRIANA APARECIDA SILVESTRE GERA",
+        "email_docente": "adriana@facef.br"
+    },
+    {
+        "id_docente": 16013,
+        "nome_docente": "DANIELA DE FIGUEIREDO RIBEIRO",
+        "email_docente": "ribares@facef.br"
+    },
+    {
+        "id_docente": 16015,
+        "nome_docente": "MAGALY GOMES MELO",
+        "email_docente": "magaly@facef.br"
+    },
+    {
+        "id_docente": 16016,
+        "nome_docente": "MARINA C\u00c9LIA MENDON\u00c7A",
+        "email_docente": "marina@facef.br"
+    },
+    {
+        "id_docente": 16017,
+        "nome_docente": "ALBA  VAL\u00c9RIA PENTEADO ORSOLINI",
+        "email_docente": "alba@facef.br"
+    },
+    {
+        "id_docente": 16018,
+        "nome_docente": "MARIA ELOISA DE SOUZA IVAN",
+        "email_docente": "mariaeloisa@facef.br"
+    },
+    {
+        "id_docente": 16021,
+        "nome_docente": "ANTONIO CARLOS DA SILVA FILHO",
+        "email_docente": "acdasf@facef.br"
+    },
+    {
+        "id_docente": 16022,
+        "nome_docente": "MARCIA HELENA VENANCIO FALEIROS",
+        "email_docente": "marciavenancio@facef.br"
+    },
+    {
+        "id_docente": 16024,
+        "nome_docente": "LUCINDA MARIA DE F\u00c1TIMA RODRIGUES COELHO",
+        "email_docente": "lucinda@facef.br"
+    },
+    {
+        "id_docente": 16026,
+        "nome_docente": "LEANDRO  BENEDINI BRUSADIN",
+        "email_docente": "leandro@facef.br"
+    },
+    {
+        "id_docente": 16027,
+        "nome_docente": "MARIA BEATRIZ  MACHADO BORDIN",
+        "email_docente": "mbeatriz@facef.br"
+    },
+    {
+        "id_docente": 16028,
+        "nome_docente": "MARIA CHERUBINA DE LIMA ALVES",
+        "email_docente": "mcherubina@facef.br"
+    },
+    {
+        "id_docente": 16030,
+        "nome_docente": "EDUARDO VICENTE SOARES",
+        "email_docente": "eduardo@facef.br"
+    },
+    {
+        "id_docente": 16032,
+        "nome_docente": "IRMA HELENA FERREIRA BENATE BOMFIM",
+        "email_docente": "irmahelena@facef.br"
+    },
+    {
+        "id_docente": 16035,
+        "nome_docente": "FL\u00c1VIA HERKER LOPES BERNAB\u00c9",
+        "email_docente": "flaviaherker@facef.br"
+    },
+    {
+        "id_docente": 16036,
+        "nome_docente": "SILVIA REGINA VIEL",
+        "email_docente": "silviaviel@facef.br"
+    },
+    {
+        "id_docente": 16037,
+        "nome_docente": "MARIA S\u00cdLVIA PEREIRA RODRIGUES ALVES BARBOSA",
+        "email_docente": "mariasilvia@facef.br"
+    },
+    {
+        "id_docente": 16038,
+        "nome_docente": "PATR\u00cdCIA  DO SOCORRO MAGALH\u00c3E F DO ESPIRITO SANTO",
+        "email_docente": "patricia@facef.br"
+    },
+    {
+        "id_docente": 16041,
+        "nome_docente": "HELO\u00cdSA HELENA VALLIM DE MELO",
+        "email_docente": "heloisahelena@facef.br"
+    },
+    {
+        "id_docente": 16044,
+        "nome_docente": "THALISA MARIA JATI GILBERTO",
+        "email_docente": "thalisa@facef.br"
+    },
+    {
+        "id_docente": 16045,
+        "nome_docente": "MARIA LUISA CASILLO JARDIM MARAN",
+        "email_docente": "marialuisa@facef.br"
+    },
+    {
+        "id_docente": 16048,
+        "nome_docente": "FLAVIA HADDAD FRAN\u00c7A",
+        "email_docente": "flaviahaddad@facef.br"
+    },
+    {
+        "id_docente": 16050,
+        "nome_docente": "MARILIA GISELDA RODRIGUES",
+        "email_docente": "mariliagiselda@facef.br"
+    },
+    {
+        "id_docente": 16052,
+        "nome_docente": "LARA BARTOCCI LIBONI",
+        "email_docente": "lara@facef.br"
+    },
+    {
+        "id_docente": 16053,
+        "nome_docente": "F\u00daLVIA NASSIF JORGE FACURY",
+        "email_docente": "fulvia@facef.br"
+    },
+    {
+        "id_docente": 16054,
+        "nome_docente": "ROBINSON LUIZ MENDES RIBEIRO",
+        "email_docente": "robinson@facef.br"
+    },
+    {
+        "id_docente": 16056,
+        "nome_docente": "ANA CRISTINA GHEDINI CARVALHO",
+        "email_docente": "anacristina@facef.br"
+    },
+    {
+        "id_docente": 16057,
+        "nome_docente": "TATIANA IURI YAMASSAKI DA SILVA",
+        "email_docente": "tatiana@facef.br"
+    },
+    {
+        "id_docente": 16058,
+        "nome_docente": "DANIEL FACCIOLO PIRES",
+        "email_docente": "daniel@facef.br"
+    },
+    {
+        "id_docente": 16059,
+        "nome_docente": "REGINA C\u00c9LIA MARQUES FREITAS SILVA",
+        "email_docente": "reginacelia@facef.br"
+    },
+    {
+        "id_docente": 16061,
+        "nome_docente": "MARIA DE FATIMA AVEIRO COLARES",
+        "email_docente": "mariadefatima@facef.br"
+    },
+    {
+        "id_docente": 16062,
+        "nome_docente": "MARIA MADALENA BORGES GUTIERRE",
+        "email_docente": "madalena@facef.br"
+    },
+    {
+        "id_docente": 16064,
+        "nome_docente": "ADILSON APARECIDO BORDO",
+        "email_docente": "adilson@facef.br"
+    },
+    {
+        "id_docente": 16066,
+        "nome_docente": "CARLOS ALBERTO LUCAS",
+        "email_docente": "carloslucas@facef.br"
+    },
+    {
+        "id_docente": 16067,
+        "nome_docente": "CARLOS EDUARDO DE FRAN\u00c7A ROLAND",
+        "email_docente": "roland@facef.br"
+    },
+    {
+        "id_docente": 16068,
+        "nome_docente": "NAI\u00c1 SADI C\u00c2MARA",
+        "email_docente": "naia@facef.br"
+    },
+    {
+        "id_docente": 16069,
+        "nome_docente": "DIMAS YAMADA SCARDOELLI",
+        "email_docente": "dimasyamada@hotmail.com"
+    },
+    {
+        "id_docente": 16070,
+        "nome_docente": "DALTRO OLIVEIRA DE CARVALHO",
+        "email_docente": "daltro@com4.com.br"
+    },
+    {
+        "id_docente": 16071,
+        "nome_docente": "PAULO ROBERTO DE PAIVA",
+        "email_docente": "paulopaiva@facef.br"
+    },
+    {
+        "id_docente": 16072,
+        "nome_docente": "V\u00c2NIA MARIA JORGE NASSIF",
+        "email_docente": "vania.nassif@uol.com.br"
+    },
+    {
+        "id_docente": 16073,
+        "nome_docente": "GUSTAVO SAAD DINIZ",
+        "email_docente": "gustavodiniz@saaddiniz.com.br"
+    },
+    {
+        "id_docente": 16074,
+        "nome_docente": "ANGELO CESAR COLOMBINI",
+        "email_docente": "accolombini@yahoo.com.br"
+    },
+    {
+        "id_docente": 16075,
+        "nome_docente": "MARCOS DANILO CHIODI MARTINS",
+        "email_docente": "marcosdanilo@marcosdanilo.com.br"
+    },
+    {
+        "id_docente": 16076,
+        "nome_docente": "LUIZ HENRIQUE OSTANEL",
+        "email_docente": "ostanel@mkg.com.br"
+    },
+    {
+        "id_docente": 16077,
+        "nome_docente": "LEANDRO GUIMAR\u00c3ES CARELLI BARRETO",
+        "email_docente": "leandrocarelli@terra.com.br"
+    },
+    {
+        "id_docente": 16078,
+        "nome_docente": "LEANDRO BORGES",
+        "email_docente": "leandro.borges@facef.br"
+    },
+    {
+        "id_docente": 16079,
+        "nome_docente": "REGINALDO APARECIDO GOTARDO",
+        "email_docente": "reginaldogotardo@facef.br"
+    },
+    {
+        "id_docente": 16081,
+        "nome_docente": "ROBERTO GALASSI AMARAL",
+        "email_docente": "ROBERTOGALASSI@FACEF.BR."
+    },
+    {
+        "id_docente": 16082,
+        "nome_docente": "ANDR\u00c9 LUIS CENTOFANTE ALVES",
+        "email_docente": "andrecentofante@facef.br"
+    },
+    {
+        "id_docente": 16083,
+        "nome_docente": "ALAN MARTINS",
+        "email_docente": "alan@facef.br"
+    },
+    {
+        "id_docente": 16084,
+        "nome_docente": "AFR\u00c2NIO MAIA MIGLIOLI",
+        "email_docente": "afraniomm@uol.com.br"
+    },
+    {
+        "id_docente": 16085,
+        "nome_docente": "MATHEUS ALBERTO CONSOLI",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16087,
+        "nome_docente": "JAQUELINE BRIGLADORI PUGLIESI",
+        "email_docente": "jaqueline@facef.br"
+    },
+    {
+        "id_docente": 16089,
+        "nome_docente": "JO\u00c3O ROBERTO DE PAULA DOMINGUES",
+        "email_docente": "jrpdomingues@yahoo.com.br"
+    },
+    {
+        "id_docente": 16090,
+        "nome_docente": "ANTONIO CEZ\u00c1R PERON",
+        "email_docente": "peron@facef.br"
+    },
+    {
+        "id_docente": 16091,
+        "nome_docente": "ELIZABETH ESPOSITO FREIXES",
+        "email_docente": "bethfreixes@gmail.com"
+    },
+    {
+        "id_docente": 16092,
+        "nome_docente": "ANTONIO JACINTO FREIXES",
+        "email_docente": "antonio.freixes@gmail.com"
+    },
+    {
+        "id_docente": 16093,
+        "nome_docente": "ADRIANA CRISTINA FERREIRA CALDANA",
+        "email_docente": "caldana@fearp.usp.br"
+    },
+    {
+        "id_docente": 16095,
+        "nome_docente": "MARCO ANT\u00d4NIO CARVALHO BRUM",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16097,
+        "nome_docente": "ARMANDO DE SANTI FILHO",
+        "email_docente": "armandosanti@facef.br"
+    },
+    {
+        "id_docente": 16098,
+        "nome_docente": "LUIZ EDUARDO GAIO",
+        "email_docente": "luizgaio@facef.br"
+    },
+    {
+        "id_docente": 16099,
+        "nome_docente": "ALBERTO SANYUAN SUEN",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16100,
+        "nome_docente": "FRANCISCO SOBREIRA NETTO",
+        "email_docente": "fsnetto@gmail.com"
+    },
+    {
+        "id_docente": 16101,
+        "nome_docente": "MIRIAM ARADO",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16102,
+        "nome_docente": "RONI CL\u00c9BER BONIZIO",
+        "email_docente": "rbonizio@hotmail.com"
+    },
+    {
+        "id_docente": 16103,
+        "nome_docente": "LUIS FERNANDO DE SOUZA MARANHA",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16105,
+        "nome_docente": "MANOEL JORGE NOBRE DO ESPIRITO SANTO",
+        "email_docente": "mjnes@facef.br"
+    },
+    {
+        "id_docente": 16106,
+        "nome_docente": "LUCAS SCIENCIA PRADO",
+        "email_docente": "LUCASPRADO@FACEF.BR"
+    },
+    {
+        "id_docente": 16108,
+        "nome_docente": "VICTOR HUGO ESP\u00cdRITO SANTO MOREIRA",
+        "email_docente": "VICTORHUGO@FACEF.BR"
+    },
+    {
+        "id_docente": 16109,
+        "nome_docente": "PRISCILA PENNA FERREIRA",
+        "email_docente": "priscila@facef.br"
+    },
+    {
+        "id_docente": 16110,
+        "nome_docente": "JUAREZ MONTEIRO DE REZENDE",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16111,
+        "nome_docente": "WALDENYR CALDAS",
+        "email_docente": "waldenyr@usp.br"
+    },
+    {
+        "id_docente": 16112,
+        "nome_docente": "LUCIANA ORANGES CEZARINO",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16665,
+        "nome_docente": "MARCELO AUGUSTO AMBROZINI",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16667,
+        "nome_docente": "CARLOS EDUARDO OSTANEL",
+        "email_docente": "cadu@mkg.com.br"
+    },
+    {
+        "id_docente": 16668,
+        "nome_docente": "MARCOS FRANCO BOTELHO",
+        "email_docente": "marcos.botelho@br.pwc.com"
+    },
+    {
+        "id_docente": 16670,
+        "nome_docente": "LEANDRO ANGOTTI GUISSONI",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16671,
+        "nome_docente": "RICARDO ROSSETTO",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16672,
+        "nome_docente": "ALEXANDRE VINICIUS DA SILVA PEREIRA",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16763,
+        "nome_docente": "ANTONIO CARLOS TAMBELLINI BETARELLO",
+        "email_docente": "acbettarello@facef.br"
+    },
+    {
+        "id_docente": 16821,
+        "nome_docente": "DEODATO BORGES DA SILVA JUNIOR",
+        "email_docente": "deodato_borges@hotmail.com"
+    },
+    {
+        "id_docente": 16946,
+        "nome_docente": "CARLOS HENRIQUE ODENIQUE JARDIM",
+        "email_docente": "CARLOSJARDIM@FACEF.BR"
+    },
+    {
+        "id_docente": 16949,
+        "nome_docente": "ELAINE CRISTINA CINTRA",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16950,
+        "nome_docente": "MARIA CELESTE CONSOLIN DEZOTTI",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16951,
+        "nome_docente": "ARNALDO CORTINA",
+        "email_docente": null
+    },
+    {
+        "id_docente": 16952,
+        "nome_docente": "M\u00c1RCIA VAL\u00c9RIA ZAMBONI GOBBI",
+        "email_docente": null
+    },
+    {
+        "id_docente": 17003,
+        "nome_docente": "GERALDO HENRIQUE NETO",
+        "email_docente": "geraldo@facef.br"
+    },
+    {
+        "id_docente": 17005,
+        "nome_docente": "T\u00c9SSIA BERBER TEIXEIRA MARANHA",
+        "email_docente": "tessia@facef.br"
+    },
+    {
+        "id_docente": 17020,
+        "nome_docente": "JOS\u00c9 ANTONIO CAMACHO GUERRERO",
+        "email_docente": "jcamacho_jr@yahoo.com"
+    },
+    {
+        "id_docente": 17021,
+        "nome_docente": "ANDERSON FABRICIO MENDES",
+        "email_docente": "andersonmendes@facef.br"
+    },
+    {
+        "id_docente": 17022,
+        "nome_docente": "LET\u00cdCIA FALEIROS CHAVES RODRIGUES",
+        "email_docente": "leticia@facef.br"
+    },
+    {
+        "id_docente": 17023,
+        "nome_docente": "THALES JATI GILBERTO",
+        "email_docente": "thalesgilberto@facef.br"
+    },
+    {
+        "id_docente": 17639,
+        "nome_docente": "IRO\u00c1 NOGUEIRA LIMA ARANTES",
+        "email_docente": null
+    },
+    {
+        "id_docente": 17640,
+        "nome_docente": "RENATA MARIA FACURI COELHO MARCHEZAN",
+        "email_docente": null
+    },
+    {
+        "id_docente": 17641,
+        "nome_docente": "RODRIGO ALVIM AFONSO",
+        "email_docente": null
+    },
+    {
+        "id_docente": 17642,
+        "nome_docente": "JOAN\u00cdLIA NEIDE DE SALES CIA",
+        "email_docente": null
+    },
+    {
+        "id_docente": 17649,
+        "nome_docente": "MAUR\u00cdCIO DE AZEVEDO VALENTINI",
+        "email_docente": "mauricio@facef.br"
+    },
+    {
+        "id_docente": 17650,
+        "nome_docente": "ANA L\u00daCIA BASSI",
+        "email_docente": "analuciabassi@facef.br"
+    },
+    {
+        "id_docente": 17788,
+        "nome_docente": "JO\u00c3O BAPTISTA COMPARINI",
+        "email_docente": "jcomparini@facef.br"
+    },
+    {
+        "id_docente": 17968,
+        "nome_docente": "FABRICIO FALEIROS FERNANDES",
+        "email_docente": "fabriciofaleiros@facef.br"
+    },
+    {
+        "id_docente": 17992,
+        "nome_docente": "C\u00c9LIO BERTELLI",
+        "email_docente": "CELIOBERTELI@FACEF.BR"
+    },
+    {
+        "id_docente": 18013,
+        "nome_docente": "JAIME ALVES DE OLIVEIRA JUNIOR",
+        "email_docente": "jjunior@facef.br"
+    },
+    {
+        "id_docente": 18025,
+        "nome_docente": "PEDRO HENRIQUE NASCIMENTO",
+        "email_docente": "pedrohenrique@facef.br"
+    },
+    {
+        "id_docente": 18573,
+        "nome_docente": "RICARDO LUIZ MENEZES DA SILVA.",
+        "email_docente": "ricardom@facef.br"
+    },
+    {
+        "id_docente": 18573,
+        "nome_docente": "RICARDO LUIZ MENEZES DA SILVA.",
+        "email_docente": null
+    },
+    {
+        "id_docente": 18735,
+        "nome_docente": "FERNANDINA FERNANDES DE LIMA MEDEIROS",
+        "email_docente": "fernandinafernandes@facef.br"
+    },
+    {
+        "id_docente": 18822,
+        "nome_docente": "ELY FERNANDO DO PRADO",
+        "email_docente": "elyfprado@facef.br"
+    },
+    {
+        "id_docente": 18858,
+        "nome_docente": "FREDERICO ALONSO SABINO DE FREITAS",
+        "email_docente": "fredericoalonso@facef.br"
+    },
+    {
+        "id_docente": 18859,
+        "nome_docente": "EDUARDO GUERRA BARBOSA SANDOVAL",
+        "email_docente": "eduardoguerra@facef.br"
+    },
+    {
+        "id_docente": 18860,
+        "nome_docente": "L\u00c9LIA NOGUEIRA RODRIGUES ALVES MARGARIDO",
+        "email_docente": "leliamargarido@facef.br"
+    },
+    {
+        "id_docente": 18861,
+        "nome_docente": "MARCELO BALLABEN CARLONI",
+        "email_docente": "marceloballaben@facef.br"
+    },
+    {
+        "id_docente": 18975,
+        "nome_docente": "ANA L\u00daCIA DE CASTRO RODRIGUES",
+        "email_docente": "analuciacastro@facef.br"
+    },
+    {
+        "id_docente": 18976,
+        "nome_docente": "ANA PAULA FERREIRA CALIL",
+        "email_docente": "apfcalil@facef.br"
+    },
+    {
+        "id_docente": 18980,
+        "nome_docente": "EDSON ALVES MARGARIDO",
+        "email_docente": "edsonmargarido@facef.br"
+    },
+    {
+        "id_docente": 18981,
+        "nome_docente": "ELISABETE LILIAN DAIR",
+        "email_docente": "elisabetedair@facef.br"
+    },
+    {
+        "id_docente": 18984,
+        "nome_docente": "JOSIANE MARIA STARLING DUARTE",
+        "email_docente": "josianemaria@facef.br"
+    },
+    {
+        "id_docente": 18985,
+        "nome_docente": "L\u00cdVIA MARIA LOPES",
+        "email_docente": "liviamaria@facef.br"
+    },
+    {
+        "id_docente": 18986,
+        "nome_docente": "M\u00c1RCIA LOPES URQUIZA",
+        "email_docente": "marciaurquiza@facef.br"
+    },
+    {
+        "id_docente": 18987,
+        "nome_docente": "MARCUS VIN\u00cdCIUS JARDINI BARBOSA",
+        "email_docente": "marcusvinicius@facef.br"
+    },
+    {
+        "id_docente": 18990,
+        "nome_docente": "MARIA ANTONIA NOVENTA",
+        "email_docente": "marianoventa@facef.br"
+    },
+    {
+        "id_docente": 18992,
+        "nome_docente": "RAQUEL CRISTINA R. DE J. C. DE M. PAIVA FERREIRA",
+        "email_docente": "raquelrangelcesario@facef.br"
+    },
+    {
+        "id_docente": 18994,
+        "nome_docente": "RENATA DAVID",
+        "email_docente": "renatadavid@facef.br"
+    },
+    {
+        "id_docente": 18996,
+        "nome_docente": "ROG\u00c9RIO DUTRA BANDOS",
+        "email_docente": "rogeriodutra@facef.br"
+    },
+    {
+        "id_docente": 18997,
+        "nome_docente": "WILSON CUNHA JUNIOR",
+        "email_docente": "wilsoncunha@facef.br"
+    },
+    {
+        "id_docente": 19009,
+        "nome_docente": "NEURO JOS\u00c9 ZAMBAM",
+        "email_docente": "NEURO@FACEF.BR"
+    },
+    {
+        "id_docente": 19036,
+        "nome_docente": "Mairun Junqueira Alves Pinto",
+        "email_docente": "mairun@facef.br"
+    },
+    {
+        "id_docente": 19069,
+        "nome_docente": "LEANDRO GASPAR CONTERATO",
+        "email_docente": "leandro.gaspar@facef.br"
+    },
+    {
+        "id_docente": 19070,
+        "nome_docente": "GUILHERME AUGUSTO BERTELLI FERNANDES CLEMENTE",
+        "email_docente": "guilhermeclemente@facef.br"
+    },
+    {
+        "id_docente": 19078,
+        "nome_docente": "PATR\u00cdCIA REIS ALVES DOS SANTOS",
+        "email_docente": "patriciasantos@facef.br"
+    },
+    {
+        "id_docente": 19082,
+        "nome_docente": "VAL\u00c9RIA BEGHELLI FERREIRA",
+        "email_docente": "valeriaferreira@facef.br"
+    },
+    {
+        "id_docente": 19083,
+        "nome_docente": "ANA CAROLINA GARCIA BRAZ",
+        "email_docente": "anacarolinabraz@facef.br"
+    },
+    {
+        "id_docente": 19084,
+        "nome_docente": "V\u00cdVIAN PEDIGONE CINTRA",
+        "email_docente": "viviancintra@facef.br"
+    },
+    {
+        "id_docente": 19087,
+        "nome_docente": "CL\u00c9RIA MARIA LOBO BITTAR",
+        "email_docente": "cleriabittar@facef.br"
+    },
+    {
+        "id_docente": 19088,
+        "nome_docente": "FERNANDA PINI DE FREITAS ",
+        "email_docente": "fernandafreitas@facef.br"
+    },
+    {
+        "id_docente": 19091,
+        "nome_docente": "WILSON DANIEL DA SILVA",
+        "email_docente": "wilsondaniel@facef.br"
+    },
+    {
+        "id_docente": 19093,
+        "nome_docente": "RAFAEL CONFETTI GATSIOS ",
+        "email_docente": "rafaelgatsios@facef.br"
+    },
+    {
+        "id_docente": 19094,
+        "nome_docente": "FABR\u00cdCIO CARLOS RODRIGUES BRUNHARA",
+        "email_docente": "fabricio.brunhara@br.pwc.com"
+    },
+    {
+        "id_docente": 19740,
+        "nome_docente": "FL\u00c1VIO HENRIQUE DE OLIVEIRA COSTA",
+        "email_docente": "flaviohenrique@facef.br"
+    },
+    {
+        "id_docente": 19758,
+        "nome_docente": "ALEXAN ICIBACI",
+        "email_docente": "alexanicibaci@facef.br"
+    },
+    {
+        "id_docente": 19759,
+        "nome_docente": "CAIRO FARACO ALONSO Y ALONSO",
+        "email_docente": "cairofaraco@facef.br"
+    },
+    {
+        "id_docente": 19760,
+        "nome_docente": "DANIELA RAMICELI",
+        "email_docente": "danielaramiceli@facef.br"
+    },
+    {
+        "id_docente": 19761,
+        "nome_docente": "EDUARDO BARCELOS RACHED",
+        "email_docente": "eduardorached@facef.br"
+    },
+    {
+        "id_docente": 19762,
+        "nome_docente": "EUR\u00cdPEDES JOS\u00c9 FLORENTINO MOTTA",
+        "email_docente": "euripedesmotta@facef.br"
+    },
+    {
+        "id_docente": 19763,
+        "nome_docente": "GABRIELA RAVAGNANI DE FARIA E SILVA",
+        "email_docente": "gabrielaravagnani@facef.br"
+    },
+    {
+        "id_docente": 19764,
+        "nome_docente": "VIVIANE RODRIGUES ESPERANDIM SAMPAIO",
+        "email_docente": "vivianerodrigues@facef.br"
+    },
+    {
+        "id_docente": 19766,
+        "nome_docente": "MARCELO C\u00c9SAR JARDIM",
+        "email_docente": "marcelojardim@facef.br"
+    },
+    {
+        "id_docente": 19767,
+        "nome_docente": "MARIA AUXILIADORA MANCILHA CARVALHO PEDIGONE",
+        "email_docente": "mariaauxiliadora@facef.br"
+    },
+    {
+        "id_docente": 19768,
+        "nome_docente": "TERESINHA GUERREIRO CERVI ANGSTMAN",
+        "email_docente": "teresinhaguerreiro@facef.br"
+    },
+    {
+        "id_docente": 19769,
+        "nome_docente": "RENATO MORAES SALLES DE FIGUEIREDO",
+        "email_docente": "renatomoraes@facef.br"
+    },
+    {
+        "id_docente": 19770,
+        "nome_docente": "CARLOS ALBERTO BORDINI",
+        "email_docente": "carlosbordini@facef.br"
+    },
+    {
+        "id_docente": 19772,
+        "nome_docente": "JO\u00c3O SOARES LEITE",
+        "email_docente": "joaosoares@facef.br"
+    },
+    {
+        "id_docente": 19846,
+        "nome_docente": "KELLY JACQUELINE BARBOSA",
+        "email_docente": "kellyjacqueline@facef.br"
+    },
+    {
+        "id_docente": 19878,
+        "nome_docente": "PIERRE MARIE FAYARD",
+        "email_docente": "pierre@facef.br"
+    },
+    {
+        "id_docente": 19901,
+        "nome_docente": "MARIA SALETE JUNQUEIRA LUCAS",
+        "email_docente": "salete@facef.br"
+    },
+    {
+        "id_docente": 19902,
+        "nome_docente": "JOSIANE BARBOSA DE OLIVEIRA",
+        "email_docente": "josianeoliveira@facef.br"
+    },
+    {
+        "id_docente": 19903,
+        "nome_docente": "CELIA CONCEI\u00c7\u00c3O FONTES PARZEWSKI",
+        "email_docente": "celiaparzewski@facef.br"
+    },
+    {
+        "id_docente": 19916,
+        "nome_docente": "GISLAINE ALVES LIPORONI PERES",
+        "email_docente": "gislaineperes@facef.br"
+    },
+    {
+        "id_docente": 19917,
+        "nome_docente": "MARIA JOS\u00c9 DE OLIVEIRA LIMA",
+        "email_docente": "mariajoselima@facef.br"
+    },
+    {
+        "id_docente": 19918,
+        "nome_docente": "GILBERTO TADEU SHINYASHIKI",
+        "email_docente": "gilbertot@facef.br"
+    },
+    {
+        "id_docente": 20516,
+        "nome_docente": "DANILO MALTA FERREIRA",
+        "email_docente": "danilomalta@facef.br"
+    },
+    {
+        "id_docente": 20518,
+        "nome_docente": "TALITA FERNANDA SOARES FREITAS ANDRADE",
+        "email_docente": "talitafernanda@facef.br"
+    },
+    {
+        "id_docente": 20519,
+        "nome_docente": "ANDERSON LUIS DO NASCIMENTO",
+        "email_docente": "andersonluis@facef.br"
+    },
+    {
+        "id_docente": 20520,
+        "nome_docente": "BARBARA R. A. MACKEVICIUS DO NASCIMENTO",
+        "email_docente": "barbaranascimento@facef.br"
+    },
+    {
+        "id_docente": 20521,
+        "nome_docente": "REYNALDO JOSE SANT'ANNA PEREIRA DE SOUZA",
+        "email_docente": "reynaldojose@facef.br"
+    },
+    {
+        "id_docente": 20523,
+        "nome_docente": "BRUNO FINOTI BARINI",
+        "email_docente": "brunofinoti@facef.br"
+    },
+    {
+        "id_docente": 20524,
+        "nome_docente": "PAULO SILVA SANTOS",
+        "email_docente": "paulosilva@facef.br"
+    },
+    {
+        "id_docente": 20526,
+        "nome_docente": "KARINE ANGELICA CINTRA",
+        "email_docente": "karineangelica@facef.br"
+    },
+    {
+        "id_docente": 20527,
+        "nome_docente": "FABIO PAMPLONA MARIANO",
+        "email_docente": "fabiopamplona@facef.br"
+    },
+    {
+        "id_docente": 20528,
+        "nome_docente": "DANIEL MACHADO",
+        "email_docente": "danielmachado@facef.br"
+    },
+    {
+        "id_docente": 20529,
+        "nome_docente": "VINICIUS CRUZ DE CASTRO",
+        "email_docente": "viniciuscruz@facef.br"
+    },
+    {
+        "id_docente": 20530,
+        "nome_docente": "MARIA LUIZA LANA MATTOS SALOM\u00c3O",
+        "email_docente": "sm-salomao@facef.br"
+    },
+    {
+        "id_docente": 20531,
+        "nome_docente": "MANUEL JO\u00c3O CESARIO DE MELLO PAIVA FERREIRA",
+        "email_docente": "manuelcesario@facef.br"
+    },
+    {
+        "id_docente": 20532,
+        "nome_docente": "DANILO VAZ DE CAMPOS MOREIRA",
+        "email_docente": "danilovaz@facef.br"
+    },
+    {
+        "id_docente": 20533,
+        "nome_docente": "CESAR MALHEIROS ZANINI",
+        "email_docente": "cesarmalheiros@facef.br"
+    },
+    {
+        "id_docente": 20586,
+        "nome_docente": "JORGE LUIZ DOS SANTOS PEREIRA",
+        "email_docente": "jorgeluiz@facef.br"
+    },
+    {
+        "id_docente": 20587,
+        "nome_docente": "ANDREA CRISTINA JUNQUEIRA SOUZA",
+        "email_docente": "andreacristina@facef.br"
+    },
+    {
+        "id_docente": 20589,
+        "nome_docente": "FRANCISCO LEITE DOS SANTOS",
+        "email_docente": "franciscoleite@facef.br"
+    },
+    {
+        "id_docente": 20590,
+        "nome_docente": "PATR\u00cdCIA BOMBICINO DAMIAN",
+        "email_docente": "patriciadamian@facef.br"
+    },
+    {
+        "id_docente": 20591,
+        "nome_docente": "S\u00cdLVIA MARIA LELI",
+        "email_docente": "silvialeli@facef.br"
+    },
+    {
+        "id_docente": 20592,
+        "nome_docente": "DANYELLE OLIVEIRA TOLEDO",
+        "email_docente": "danyelleoliveira@facef.br"
+    },
+    {
+        "id_docente": 20728,
+        "nome_docente": "LEYLLA KLLYFFYA LOPES LEAO TRAJANO",
+        "email_docente": "leyllatrajano@facef.br"
+    },
+    {
+        "id_docente": 20729,
+        "nome_docente": "MARIA FERNANDA WALTER IBRAHIM",
+        "email_docente": "mfernandaibrahim@facef.br"
+    },
+    {
+        "id_docente": 20730,
+        "nome_docente": "RITA DE CASSIA FUGA BERTELI FONTES",
+        "email_docente": "ritafontes@facef.br"
+    },
+    {
+        "id_docente": 20731,
+        "nome_docente": "RODRIGO TAVARES SILVA",
+        "email_docente": "rodrigosilva@facef.br"
+    },
+    {
+        "id_docente": 20743,
+        "nome_docente": "LUANA CAROLINA RODRIGUES GUIMARAES",
+        "email_docente": "luanacarolina@facef.br"
+    },
+    {
+        "id_docente": 20772,
+        "nome_docente": "D\u00c9BORA AGEL MELLEM",
+        "email_docente": "deboramellem@facef.br"
+    },
+    {
+        "id_docente": 20782,
+        "nome_docente": "FRANCISCO DE ASSIS BREDA",
+        "email_docente": "breda@facef.br"
+    },
+    {
+        "id_docente": 20783,
+        "nome_docente": "TALES VILELA SANTEIRO",
+        "email_docente": "talesanteiro@facef.br"
+    },
+    {
+        "id_docente": 20784,
+        "nome_docente": "EMERSON DE MORAES",
+        "email_docente": "emersonmoraes@facef.br"
+    },
+    {
+        "id_docente": 20785,
+        "nome_docente": "LUIS FERNANDO FACIOLI ROSA",
+        "email_docente": "luisfernandorosa@facef.br"
+    },
+    {
+        "id_docente": 20810,
+        "nome_docente": "FERNANDA ALEIXO TEIXEIRA",
+        "email_docente": "fernandaaleixo@facef.br"
+    },
+    {
+        "id_docente": 20811,
+        "nome_docente": "V\u00c2NIA GAMEIRO DE CARVALHO",
+        "email_docente": "vaniagameiro@facef.br"
+    },
+    {
+        "id_docente": 20813,
+        "nome_docente": "ANA PAULA GHEDINI LOPES",
+        "email_docente": "anapaulaghedini@facef.br"
+    },
+    {
+        "id_docente": 20814,
+        "nome_docente": "RENATA CAMILA RODRIGUES BARROS",
+        "email_docente": "renatacamila@facef.br"
+    },
+    {
+        "id_docente": 20816,
+        "nome_docente": "FL\u00c1VIO AUGUSTO DA SILVA",
+        "email_docente": "coordpos"
+    },
+    {
+        "id_docente": 21214,
+        "nome_docente": "PATR\u00cdCIA NUNES",
+        "email_docente": "patricianunes@facef.br"
+    },
+    {
+        "id_docente": 21354,
+        "nome_docente": "ALET\u00c9IA CORDERO LEAL OLIVEIRA",
+        "email_docente": "aleteiacordero@facef.br"
+    },
+    {
+        "id_docente": 21359,
+        "nome_docente": "EDNA APARECIDA RODRIGUES DA SILVA",
+        "email_docente": "ednaaparecida@facef.br"
+    },
+    {
+        "id_docente": 21362,
+        "nome_docente": "J\u00daLIA ROMANI OLIVEIRA DE SIQUEIRA",
+        "email_docente": "juliaromani@facef.br"
+    },
+    {
+        "id_docente": 21363,
+        "nome_docente": "RAFAEL LYRA RODRIGUES ALVES",
+        "email_docente": "rafaellyra@facef.br"
+    },
+    {
+        "id_docente": 21364,
+        "nome_docente": "J\u00daLIO C\u00c9SAR DOMENCIANO",
+        "email_docente": "juliocesar@facef.br"
+    },
+    {
+        "id_docente": 21365,
+        "nome_docente": "L\u00cdVIA FERREIRA SILVA VERZOLA",
+        "email_docente": "liviaferreira@facef.br"
+    },
+    {
+        "id_docente": 21366,
+        "nome_docente": "N\u00daBIA DE SOUZA CINTRA",
+        "email_docente": "nubiasouza@facef.br"
+    },
+    {
+        "id_docente": 21367,
+        "nome_docente": "JONAS DE LARA FRACALOZZI",
+        "email_docente": "jonaslara@facef.br"
+    },
+    {
+        "id_docente": 21368,
+        "nome_docente": "M\u00c1RCIA CRISTINA TAVEIRA PUCCI GREEN",
+        "email_docente": "marciacristina@facef.br"
+    },
+    {
+        "id_docente": 21369,
+        "nome_docente": "MARINA HADDAD FRAN\u00c7A BARCELOS",
+        "email_docente": "marinahaddad@facef.br"
+    },
+    {
+        "id_docente": 21523,
+        "nome_docente": "PHILLIPE BUGNER",
+        "email_docente": "phillipebugner@facef.br"
+    },
+    {
+        "id_docente": 21524,
+        "nome_docente": "ANA CAROLINA ZANIN SACOMAN KURIHARA",
+        "email_docente": "anacarolinazanin@facef.br"
+    },
+    {
+        "id_docente": 21525,
+        "nome_docente": "THIAGO ALVES HUNGARO",
+        "email_docente": "thiagoalves@facef.br"
+    },
+    {
+        "id_docente": 21526,
+        "nome_docente": "HAROLDO GREEN",
+        "email_docente": "haroldogreen@facef.br"
+    },
+    {
+        "id_docente": 21579,
+        "nome_docente": "TIAGO MERLINO DOMENES",
+        "email_docente": "TMDOMENES@FACEF.BR"
+    },
+    {
+        "id_docente": 21582,
+        "nome_docente": "MARIA LUISA CERVI UZUN",
+        "email_docente": "marialuisacervi@facef.br"
+    },
+    {
+        "id_docente": 21586,
+        "nome_docente": "RICARDO DAVID",
+        "email_docente": "ricardodavid@facef.br"
+    },
+    {
+        "id_docente": 21587,
+        "nome_docente": "\u00c9DIO RENATO F\u00c1VARO",
+        "email_docente": "edio@facef.br"
+    },
+    {
+        "id_docente": 21588,
+        "nome_docente": "NAYELE MACINI",
+        "email_docente": "nayele@facef.br"
+    },
+    {
+        "id_docente": 21590,
+        "nome_docente": "JOS\u00c9 VITOR PEREIRA MIGUEL",
+        "email_docente": "josevitor@facef.br"
+    },
+    {
+        "id_docente": 21601,
+        "nome_docente": "DENNER ALVES CARDOSO",
+        "email_docente": "dennercardoso@facef.br"
+    },
+    {
+        "id_docente": 21602,
+        "nome_docente": "GABRIELA PAGANO DE OLIVEIRA GON\u00c7ALVES DA SILVA",
+        "email_docente": "gabrielapagano@facef.br"
+    },
+    {
+        "id_docente": 21603,
+        "nome_docente": "PATRICIA HELENA KOCH",
+        "email_docente": "patriciakoch@facef.br"
+    },
+    {
+        "id_docente": 21604,
+        "nome_docente": "FABIANA CRISTINA TELLES TRIST\u00c3O",
+        "email_docente": "fabianatristao@facef.br"
+    },
+    {
+        "id_docente": 21605,
+        "nome_docente": "HAROLDO DA SILVA SANTANA",
+        "email_docente": "haroldosantana@facef.br"
+    },
+    {
+        "id_docente": 21606,
+        "nome_docente": "KAREN REGINA SANTANA",
+        "email_docente": "karenregina@facef.br"
+    },
+    {
+        "id_docente": 21611,
+        "nome_docente": "Em\u00edlia Telma Nery Rodrigues Geron",
+        "email_docente": "telmaml@facef.br"
+    },
+    {
+        "id_docente": 21616,
+        "nome_docente": "Elaine Cristina Peixoto Comodaro",
+        "email_docente": "elainecomodaro@facef.br"
+    }
+]

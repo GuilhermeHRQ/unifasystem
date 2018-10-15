@@ -1,0 +1,48 @@
+Escopo Unifasystem (Prazo 30/11)
+
+Desenvolvimento
+
+- Integrar login com a API de professores
+	(*IDEIA: Os dados de login podem ser salvos em um banco próprio, basta realizar a procura primeiro em nosso banco, caso não exista é feita a requisição para busca do professor na API, caso ache salva os dados em nosso banco)
+
+- Fluxo para abertura de chamada pelo professor 
+	- Curso -> Bimestre -> Disciplina (Possível fluxo, utilizando filters)
+
+- Com base no id do professor, realiza a busca de todas as disciplinas nas quais ele tem acesso, ele faz a escolha da mesma e habilita 
+o sistema a disponibilizar para os alunos utilizarem o sistema, quando do aluno chega até o ponto e passa o cartão, o sistema verifica
+pelo código do aluno se o mesmo possui acesso a alguma disciplina em aberto, caso sim é realizada a confirmação da presença para o mesmo. 
+Ao realizar este processo, o aluno aparece em uma lista para o professor (já que não é possivel ter acesso a uma lista completa dos alunos
+de uma determinada turma), com isso professor tem poder para retirar presença do mesmo. O professor é habilitado a escolher para quantas
+aulas a presença irá valer (2 ou 4, que é o padrão de aulas para uma disciplina por dia). Para confirmação da presença o professor deve 
+informar qual o conteúdo lecionado no dia, e confirmar a relação de alunos presentes, após salvo o professor não poderá mais editar os dados.
+
+- Os dados da chamada serão salvos em um banco de dados nosso
+
+
+*** Fluxo para Login do professor
+- O professor entra com seu email ou código (obrigatório para caso ainda não tenha um cadastro), caso o professor não seja encontrado em nossa base
+realizamos um requisição na api da facef pelo código, caso retorne puxamos os dados, salvamos em nosso banco e o levamos a uma parte para inserir
+uma senha para utilização. (*Verificar se podemos salvar os dados em nosso banco)
+- Caso o professor já possua cadastro na base, é realizado o login normalmente.
+
+*** Fluxo para controle de presença (Professor)
+- O professor terá acesso a um menu exclusivo para utilizar o controle de presença
+    - Ao acessar ele verá uma listagem, onde mostraremos as chamadas já feitas, com filtros de data, disciplina e etc. (Por padrão filtrar data hoje)
+    - Ao clicar em uma das chamadas na lista, caso ainda aberta, ele poderá editar os dados, caso já tenha sido finalizada, poderá apenas 
+    visualizar.
+    - Possui um botão para adicionar uma nova chamada. Ao clicar é levado a uma outra tela onde o professor informa a disciplina a qual será
+    a chamada, com filtros, ao informar a disciplina ele preenche a hora de abertura e fechamento e para quantas aulas a chamada será válida (2 ou 4).
+    Mas também terá controle para finalizar a chamada quando quiser. Pode-se também excluir uma chamada caso tenha ocorrido algum erro.
+    - Também deverá ser informado o conteúdo lecionado na aula, obrigatório para fechamento da chamada.
+    - Depois de informado os dados e a chamada aberta, aparece abaixo uma lista com os alunos que já se marcaram como presentes, com possibilidade
+    do professor desmarcar a presença dos alunos.
+
+
+
+** Função para converter os unicodes no nome das matérias
+function unicodeToChar(text) {
+   return 
+   text.replace(/\\u[\dA-F]{4}/gi, function (match) {
+                                    return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
+                                    });
+}

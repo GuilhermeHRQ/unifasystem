@@ -1,0 +1,18 @@
+- Exibe dados do aluno
+http://dev2.unifacef.com.br:8000/api/matriculadoGrad/id_aluno
+
+- Exibe os dados da disciplina
+http://dev2.unifacef.com.br:8000/api/disciplinaGrad/id_disciplina_serie
+
+- Exibe as disciplinas que o aluno está vinculado
+http://dev2.unifacef.com.br:8000/api/inscricoesDisciplinaGrad/id_aluno
+
+-Utilizado para listar todos os docentes
+http://dev2.unifacef.com.br:8000/api/docente
+
+- Utilizado para listar dados de apenas um docente
+http://dev2.unifacef.com.br:8000/api/docente/id_docente
+
+- Utilizado para verificar qual as disciplinas vinculadas a um docente
+http://dev2.unifacef.com.br:8000/api/disciplinaDocente/id_docente
+

@@ -1,0 +1,21 @@
+[
+    {
+        "id_aluno": 20245,
+        "prenome_aluno": "20245",
+        "sobrenome_aluno": "GUILHERME HENRIQUE FERREIRA ASSIS",
+        "nome_completo_aluno": "20245 GUILHERME HENRIQUE FERREIRA ASSIS",
+        "cpf": "461.149.688-08",
+        "hash_senha": "740dc4ac3dc4275b214eb4087327471b",
+        "email": "GUILHERME_HRQ99@OUTLOOK.COM",
+        "cidade_uf": "FRANCA\/SP",
+        "pais": "Brasil",
+        "semestre": 4,
+        "ano": 2018,
+        "id_curso": 92,
+        "nome_curso": "SISTEMAS DE INFORMA\u00c7\u00c3O",
+        "situacao": "2",
+        "dt_conclusao": "2019-12-31",
+        "id_serie": 237,
+        "id_matricula": 100792
+    }
+]
