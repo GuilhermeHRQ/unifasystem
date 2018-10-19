@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="1"
+	 default-schema="public" default-owner="postgres">
+<database name="new_database">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<schema name="administracao" rect-visible="true" fill-color="#e1e1e1">
+</schema>
+
+<table name="status">
+	<schema name="administracao"/>
+	<comment><![CDATA[Tabela com os possíveis status do controle de presença]]></comment>
+	<position x="41" y="402"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[ID do status]]></comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+		<comment><![CDATA[Nome referente ao status]]></comment>
+	</column>
+	<constraint name="status_pk" type="pk-constr" table="administracao.status">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="acessoprofessor">
+	<schema name="administracao"/>
+	<comment><![CDATA[Tabela onde contém os dados para acesso dos professores]]></comment>
+	<position x="30.2328" y="176"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[ID do professor no sistema]]></comment>
+	</column>
+	<column name="codigo" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Código do professor no sistema da facef]]></comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Nome do professor]]></comment>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="255"/>
+		<comment><![CDATA[Email do professor, para acesso no sistema]]></comment>
+	</column>
+	<column name="senha" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Senha para acesso ao sistema]]></comment>
+	</column>
+	<column name="ultimologin" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment><![CDATA[Último login do professor no sistema]]></comment>
+	</column>
+	<constraint name="acessoprofessor_pk" type="pk-constr" table="administracao.acessoprofessor">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="controlepresenca">
+	<schema name="administracao"/>
+	<comment><![CDATA[Tabela com dados das chamadas feitas por aula]]></comment>
+	<position x="460.349" y="159.5"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[Chave primária da tabela]]></comment>
+	</column>
+	<column name="semestre" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Semestre da disciplina]]></comment>
+	</column>
+	<column name="iddisciplina" not-null="true">
+		<type name="varchar" length="10"/>
+		<comment><![CDATA[Id da disciplina no sistema da facef]]></comment>
+	</column>
+	<column name="idprofessor" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Id do professor]]></comment>
+	</column>
+	<column name="nome_turma" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Nome da turma no sistema da facef]]></comment>
+	</column>
+	<column name="nome_disciplina" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Nome da disciplina no sistema da facef]]></comment>
+	</column>
+	<column name="hora_abertura" not-null="true">
+		<type name="time" length="0"/>
+		<comment><![CDATA[Hora em que a chamada ficara disponivel]]></comment>
+	</column>
+	<column name="hora_fechamento" not-null="true">
+		<type name="time" length="0"/>
+		<comment><![CDATA[Hora em que a chamada se tornará indisponível]]></comment>
+	</column>
+	<column name="quantidadepresencas" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment><![CDATA[Indica quantas presenças a chamada garante ao aluno (2 ou 4)]]></comment>
+	</column>
+	<column name="conteudo">
+		<type name="text" length="0"/>
+		<comment><![CDATA[Conteúdo lecionado em aula pelo professor]]></comment>
+	</column>
+	<column name="datacadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment><![CDATA[Data e hora em que os parametros foram definidos]]></comment>
+	</column>
+	<column name="dataconfirmacao">
+		<type name="timestamp" length="0"/>
+		<comment><![CDATA[Data e hora em que as presenças foram confirmadas pelo professor]]></comment>
+	</column>
+	<column name="idstatus" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Chave estrangeira que define qual o status do controle]]></comment>
+	</column>
+	<constraint name="controlepresenca_pk" type="pk-constr" table="administracao.controlepresenca">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="alunopresenca">
+	<schema name="administracao"/>
+	<comment><![CDATA[Dados dos alunos vinculados a um controle de presenca]]></comment>
+	<position x="921" y="195"/>
+	<column name="idcontrolepresenca" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Chave primária composta referente ao id do controle de presença]]></comment>
+	</column>
+	<column name="idaluno" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Chave primária composta referente ao id do aluno]]></comment>
+	</column>
+	<column name="nomealuno" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Nome do aluno]]></comment>
+	</column>
+	<column name="horaentrada" not-null="true">
+		<type name="time" length="0"/>
+		<comment><![CDATA[Hora que o aluno se marcou como presente na chamada]]></comment>
+	</column>
+	<column name="horasaida">
+		<type name="time" length="0"/>
+		<comment><![CDATA[Hora que o aluno marcou saida na chamada]]></comment>
+	</column>
+	<column name="quantidadepresencas" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment><![CDATA[Quantas presencas o aluno obteve na chamada (1 a 4)]]></comment>
+	</column>
+	<constraint name="alunopresenca_pk" type="pk-constr" table="administracao.alunopresenca">
+		<columns names="idcontrolepresenca,idaluno" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<constraint name="fk_controlepresenca_status" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.status" table="administracao.controlepresenca">
+	<columns names="idstatus" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+		<comment><![CDATA[Chave estrangeira que indica o status da chamada]]></comment>
+</constraint>
+
+<constraint name="fk_controlepresenca_acessoprofessor" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.acessoprofessor" table="administracao.controlepresenca">
+	<columns names="idprofessor" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+		<comment><![CDATA[Chave estrangeira com ligação a tabela professor]]></comment>
+</constraint>
+
+<constraint name="fk_alunopresenca_controlepresenca" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.controlepresenca" table="administracao.alunopresenca">
+	<columns names="idcontrolepresenca" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+		<comment><![CDATA[Chave estrangeira referente ao controle de presença]]></comment>
+</constraint>
+
+<relationship name="rel_controlepresenca_status" type="relfk"
+	 src-table="administracao.controlepresenca"
+	 dst-table="administracao.status"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_controlepresenca_acessoprofessor" type="relfk"
+	 src-table="administracao.controlepresenca"
+	 dst-table="administracao.acessoprofessor"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_alunopresenca_controlepresenca" type="relfk"
+	 src-table="administracao.alunopresenca"
+	 dst-table="administracao.controlepresenca"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>

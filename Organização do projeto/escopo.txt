@@ -55,6 +55,7 @@
             - Quantidade de presenças
             - Conteúdo lecionado
             - Habilitar uso para os alunos
+            - Listar alunos marcados como presentes
         - Edição do controle
             - Caso aberta
                 - Desmarcar alunos presentes
@@ -65,7 +66,26 @@
                 - Visualizar dados
                 - Cancelamento da chamada
 
+-Aluno
+    - Controle de presença
+        - Busca por disciplinas em aberto a qual o aluno esta matriculado
+        - Marcar o  mesmo como presente 
+        - Mensagem de confirmação ou erro
 
+*** Analise
+
+- Revisão (Mudar o que já está pronto, para adaptar a nossa proposta de projeto)
+    - Diagramas antigos
+    - Documentação
+    - BPMN
+    - UC
+- Manter Atualizado
+    - TAP
+    - EAP
+    - 5W2H
+- Fazer
+    - Canvas
+    - Modelo de negócios
 
 
 
