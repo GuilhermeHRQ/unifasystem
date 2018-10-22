@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="1"
+<dbmodel pgmodeler-ver="0.9.0" last-position="0,83" last-zoom="0.9"
 	 default-schema="public" default-owner="postgres">
 <database name="new_database">
 </database>
@@ -17,12 +17,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="status">
 	<schema name="administracao"/>
 	<comment><![CDATA[Tabela com os possíveis status do controle de presença]]></comment>
-	<position x="41" y="402"/>
+	<position x="40" y="180"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[ID do status]]></comment>
 	</column>
-	<column name="nome" not-null="true">
+	<column name="ds_status" not-null="true">
 		<type name="varchar" length="30"/>
 		<comment><![CDATA[Nome referente ao status]]></comment>
 	</column>
@@ -32,9 +32,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </table>
 
 <table name="acessoprofessor">
-	<schema name="administracao"/>
+	<schema name="seguranca"/>
 	<comment><![CDATA[Tabela onde contém os dados para acesso dos professores]]></comment>
-	<position x="30.2328" y="176"/>
+	<position x="40" y="523"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[ID do professor no sistema]]></comment>
@@ -59,7 +59,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="timestamp" length="0"/>
 		<comment><![CDATA[Último login do professor no sistema]]></comment>
 	</column>
-	<constraint name="acessoprofessor_pk" type="pk-constr" table="administracao.acessoprofessor">
+	<constraint name="acessoprofessor_pk" type="pk-constr" table="seguranca.acessoprofessor">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
 </table>
@@ -67,7 +67,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="controlepresenca">
 	<schema name="administracao"/>
 	<comment><![CDATA[Tabela com dados das chamadas feitas por aula]]></comment>
-	<position x="460.349" y="159.5"/>
+	<position x="460" y="160"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Chave primária da tabela]]></comment>
@@ -128,7 +128,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="alunopresenca">
 	<schema name="administracao"/>
 	<comment><![CDATA[Dados dos alunos vinculados a um controle de presenca]]></comment>
-	<position x="921" y="195"/>
+	<position x="920" y="200"/>
 	<column name="idcontrolepresenca" not-null="true">
 		<type name="integer" length="0"/>
 		<comment><![CDATA[Chave primária composta referente ao id do controle de presença]]></comment>
@@ -158,6 +158,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
+<schema name="seguranca" rect-visible="true" fill-color="#e1e1e1">
+</schema>
+
 <constraint name="fk_controlepresenca_status" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.status" table="administracao.controlepresenca">
 	<columns names="idstatus" ref-type="src-columns"/>
@@ -166,7 +169,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </constraint>
 
 <constraint name="fk_controlepresenca_acessoprofessor" type="fk-constr" comparison-type="MATCH FULL"
-	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.acessoprofessor" table="administracao.controlepresenca">
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.acessoprofessor" table="administracao.controlepresenca">
 	<columns names="idprofessor" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 		<comment><![CDATA[Chave estrangeira com ligação a tabela professor]]></comment>
@@ -186,7 +189,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <relationship name="rel_controlepresenca_acessoprofessor" type="relfk"
 	 src-table="administracao.controlepresenca"
-	 dst-table="administracao.acessoprofessor"
+	 dst-table="seguranca.acessoprofessor"
 	 src-required="false" dst-required="false"/>
 
 <relationship name="rel_alunopresenca_controlepresenca" type="relfk"
