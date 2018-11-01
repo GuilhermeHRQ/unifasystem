@@ -236,6 +236,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <relationship name="rel_opcaomenu_opcaomenu" type="relfk"
 	 src-table="seguranca.opcaomenu"
 	 dst-table="seguranca.opcaomenu"
-	 src-required="false" dst-required="false"/>
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="731.466" y="124.2"/>
+	<position x="731.466" y="64"/>
+	<position x="628.644" y="64"/>
+	</line>
+</relationship>
 
 </dbmodel>
