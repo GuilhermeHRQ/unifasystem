@@ -4,7 +4,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
          Unexpected results may occur if the code is changed deliberately.
 -->
 <dbmodel pgmodeler-ver="0.9.0" last-position="0,0" last-zoom="1"
-	 default-schema="public" default-owner="postgres">
+	 default-owner="postgres">
 <database name="new_database">
 </database>
 
@@ -17,7 +17,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="status">
 	<schema name="administracao"/>
 	<comment><![CDATA[Tabela com os possíveis status do controle de presença]]></comment>
-	<position x="41" y="402"/>
+	<position x="20" y="504"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[ID do status]]></comment>
@@ -31,43 +31,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="acessoprofessor">
-	<schema name="administracao"/>
-	<comment><![CDATA[Tabela onde contém os dados para acesso dos professores]]></comment>
-	<position x="30.2328" y="176"/>
-	<column name="id" not-null="true">
-		<type name="serial" length="0"/>
-		<comment><![CDATA[ID do professor no sistema]]></comment>
-	</column>
-	<column name="codigo" not-null="true">
-		<type name="integer" length="0"/>
-		<comment><![CDATA[Código do professor no sistema da facef]]></comment>
-	</column>
-	<column name="nome" not-null="true">
-		<type name="varchar" length="100"/>
-		<comment><![CDATA[Nome do professor]]></comment>
-	</column>
-	<column name="email" not-null="true">
-		<type name="varchar" length="255"/>
-		<comment><![CDATA[Email do professor, para acesso no sistema]]></comment>
-	</column>
-	<column name="senha" not-null="true">
-		<type name="varchar" length="100"/>
-		<comment><![CDATA[Senha para acesso ao sistema]]></comment>
-	</column>
-	<column name="ultimologin" not-null="true">
-		<type name="timestamp" length="0"/>
-		<comment><![CDATA[Último login do professor no sistema]]></comment>
-	</column>
-	<constraint name="acessoprofessor_pk" type="pk-constr" table="administracao.acessoprofessor">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
 <table name="controlepresenca">
 	<schema name="administracao"/>
 	<comment><![CDATA[Tabela com dados das chamadas feitas por aula]]></comment>
-	<position x="460.349" y="159.5"/>
+	<position x="439.349" y="261.5"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
 		<comment><![CDATA[Chave primária da tabela]]></comment>
@@ -77,8 +44,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<comment><![CDATA[Semestre da disciplina]]></comment>
 	</column>
 	<column name="iddisciplina" not-null="true">
-		<type name="varchar" length="10"/>
+		<type name="integer" length="10"/>
 		<comment><![CDATA[Id da disciplina no sistema da facef]]></comment>
+	</column>
+	<column name="idturma" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[ID da turma]]></comment>
 	</column>
 	<column name="idprofessor" not-null="true">
 		<type name="integer" length="0"/>
@@ -128,7 +99,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="alunopresenca">
 	<schema name="administracao"/>
 	<comment><![CDATA[Dados dos alunos vinculados a um controle de presenca]]></comment>
-	<position x="921" y="195"/>
+	<position x="900" y="297"/>
 	<column name="idcontrolepresenca" not-null="true">
 		<type name="integer" length="0"/>
 		<comment><![CDATA[Chave primária composta referente ao id do controle de presença]]></comment>
@@ -158,6 +129,67 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
+<schema name="seguranca" rect-visible="true" fill-color="#0000ff">
+</schema>
+
+<table name="acessoprofessor">
+	<schema name="seguranca"/>
+	<comment><![CDATA[Tabela onde contém os dados para acesso dos professores]]></comment>
+	<position x="21.2328" y="76"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[ID do professor no sistema]]></comment>
+	</column>
+	<column name="codigo" not-null="true">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Código do professor no sistema da facef]]></comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Nome do professor]]></comment>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="255"/>
+		<comment><![CDATA[Email do professor, para acesso no sistema]]></comment>
+	</column>
+	<column name="senha" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Senha para acesso ao sistema]]></comment>
+	</column>
+	<column name="ultimologin" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment><![CDATA[Último login do professor no sistema]]></comment>
+	</column>
+	<constraint name="acessoprofessor_pk" type="pk-constr" table="seguranca.acessoprofessor">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="opcaomenu">
+	<schema name="seguranca"/>
+	<comment><![CDATA[Tabela com as opções de menu do sistema]]></comment>
+	<position x="445" y="75"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment><![CDATA[Chave primária da tabela]]></comment>
+	</column>
+	<column name="idmae">
+		<type name="integer" length="0"/>
+		<comment><![CDATA[Menu superior - Auto-join]]></comment>
+	</column>
+	<column name="url">
+		<type name="varchar" length="100"/>
+		<comment><![CDATA[Rota do menu]]></comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+		<comment><![CDATA[Nome para o menu]]></comment>
+	</column>
+	<constraint name="opcaomenu_pk" type="pk-constr" table="seguranca.opcaomenu">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
 <constraint name="fk_controlepresenca_status" type="fk-constr" comparison-type="MATCH FULL"
 	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.status" table="administracao.controlepresenca">
 	<columns names="idstatus" ref-type="src-columns"/>
@@ -166,7 +198,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </constraint>
 
 <constraint name="fk_controlepresenca_acessoprofessor" type="fk-constr" comparison-type="MATCH FULL"
-	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="administracao.acessoprofessor" table="administracao.controlepresenca">
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.acessoprofessor" table="administracao.controlepresenca">
 	<columns names="idprofessor" ref-type="src-columns"/>
 	<columns names="id" ref-type="dst-columns"/>
 		<comment><![CDATA[Chave estrangeira com ligação a tabela professor]]></comment>
@@ -179,6 +211,13 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<comment><![CDATA[Chave estrangeira referente ao controle de presença]]></comment>
 </constraint>
 
+<constraint name="fk_opcaomenu_idmae" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="seguranca.opcaomenu" table="seguranca.opcaomenu">
+	<columns names="idmae" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+		<comment><![CDATA[Chave do auto-join]]></comment>
+</constraint>
+
 <relationship name="rel_controlepresenca_status" type="relfk"
 	 src-table="administracao.controlepresenca"
 	 dst-table="administracao.status"
@@ -186,12 +225,17 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <relationship name="rel_controlepresenca_acessoprofessor" type="relfk"
 	 src-table="administracao.controlepresenca"
-	 dst-table="administracao.acessoprofessor"
+	 dst-table="seguranca.acessoprofessor"
 	 src-required="false" dst-required="false"/>
 
 <relationship name="rel_alunopresenca_controlepresenca" type="relfk"
 	 src-table="administracao.alunopresenca"
 	 dst-table="administracao.controlepresenca"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_opcaomenu_opcaomenu" type="relfk"
+	 src-table="seguranca.opcaomenu"
+	 dst-table="seguranca.opcaomenu"
 	 src-required="false" dst-required="false"/>
 
 </dbmodel>
